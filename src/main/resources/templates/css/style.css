@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "배달의민족 꾸불림";
+  overflow-x: scroll;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #ccc;
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+.menu {
+  display: flex;
+  gap: 30px;
+}
+.auth {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.auth a {
+  text-decoration: none;
+  color: black;
+}
+
+.auth .signup-btn {
+  padding: 4px 15px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.logo-img {
+  width: 45px;
+  height: 45px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.productTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  padding-top: 55px;
+  text-align: center;
+}
+.productIntro {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  padding-top: 30px;
+  text-align: center;
+}
+/* .Title {
+      position: relative;
+    }
+    .bubble {
+      right: 1000px;
+      bottom: 30px;
+    } */
+.signup-container {
+  display: flex;
+  flex-direction: column; /*위에서 아래로 정렬*/
+  align-items: center; /*가로 방향 중앙 정렬*/
+  width: 180px;
+  padding: 15px;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  justify-content: center;
+  margin: 0 auto; /*margin: 0 auto; 는 display: block 속성을 가진 요소(div 등)를 가로 중앙에 정렬
+
+    0: 위/아래 여백을 0으로 설정
+
+    auto: 왼쪽/오른쪽 여백을 자동으로 계산하여 동일하게 분배*/
+  margin-top: 30px;
+}
+
+.signup {
+  width: 100%;
+  padding: 15px 0;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "배달의민족 꾸불림";
+}
+.join-text {
+  margin-top: 15px; /*버튼과 텍스트 사이 간격*/
+  font-size: 1.1rem;
+}
+
+.food-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.food1 {
+  width: 300px;
+  height: auto;
+}
+.food2 {
+  width: 250px;
+  height: auto;
+}
+.food3 {
+  width: 220px;
+  height: auto;
+}
+.food4 {
+  width: 250px;
+  height: auto;
+}
+.food5 {
+  width: 300px;
+  height: auto;
+}
