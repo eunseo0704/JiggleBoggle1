@@ -1,14 +1,212 @@
-2025-09-23T17:42:46.499+09:00  INFO 71655 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 71655 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
-2025-09-23T17:42:46.507+09:00  INFO 71655 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
-2025-09-23T17:42:47.075+09:00  WARN 71655 --- [JiggleBoggle1] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.spring.jiggleboggle1]' package. Please check your configuration.
-2025-09-23T17:42:47.293+09:00  INFO 71655 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
-2025-09-23T17:42:47.305+09:00  INFO 71655 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-09-23T17:42:47.305+09:00  INFO 71655 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
-2025-09-23T17:42:47.332+09:00  INFO 71655 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-09-23T17:42:47.332+09:00  INFO 71655 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 792 ms
-2025-09-23T17:42:47.656+09:00  INFO 71655 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2025-09-23T17:42:47.693+09:00  INFO 71655 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
-2025-09-23T17:42:47.701+09:00  INFO 71655 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 1.607 seconds (process running for 2.122)
-2025-09-23T17:42:53.701+09:00  INFO 71655 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-09-23T17:42:53.701+09:00  INFO 71655 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-09-23T17:42:53.703+09:00  INFO 71655 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-30T17:05:53.298+09:00  INFO 24497 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 24497 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T17:05:53.299+09:00  INFO 24497 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T17:05:53.633+09:00  INFO 24497 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T17:05:53.638+09:00  INFO 24497 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T17:05:53.638+09:00  INFO 24497 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T17:05:53.650+09:00  INFO 24497 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T17:05:53.651+09:00  INFO 24497 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 336 ms
+2025-09-30T17:05:53.824+09:00  INFO 24497 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T17:05:53.842+09:00  INFO 24497 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T17:05:53.846+09:00  INFO 24497 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.687 seconds (process running for 0.914)
+2025-09-30T17:06:49.022+09:00  INFO 24497 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30T17:06:49.022+09:00  INFO 24497 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-30T17:06:49.023+09:00  INFO 24497 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-09-30T17:09:27.210+09:00  INFO 24697 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 24697 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T17:09:27.212+09:00  INFO 24697 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T17:09:27.635+09:00  INFO 24697 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T17:09:27.640+09:00  INFO 24697 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T17:09:27.640+09:00  INFO 24697 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T17:09:27.650+09:00  INFO 24702 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 24702 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T17:09:27.651+09:00  INFO 24702 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T17:09:27.655+09:00  INFO 24697 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T17:09:27.655+09:00  INFO 24697 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 419 ms
+2025-09-30T17:09:27.727+09:00  INFO 24697 --- [JiggleBoggle1] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-30T17:09:27.833+09:00  INFO 24697 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T17:09:27.856+09:00  INFO 24697 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T17:09:27.860+09:00  INFO 24697 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.832 seconds (process running for 1.058)
+2025-09-30T17:09:27.954+09:00  INFO 24702 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T17:09:27.959+09:00  INFO 24702 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T17:09:27.959+09:00  INFO 24702 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T17:09:27.970+09:00  INFO 24702 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T17:09:27.970+09:00  INFO 24702 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 305 ms
+2025-09-30T17:09:28.029+09:00  INFO 24702 --- [JiggleBoggle1] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-30T17:09:28.121+09:00  INFO 24702 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T17:09:28.133+09:00  WARN 24702 --- [JiggleBoggle1] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-09-30T17:09:28.138+09:00  INFO 24702 --- [JiggleBoggle1] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-30T17:09:28.143+09:00 ERROR 24702 --- [JiggleBoggle1] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9191 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9191 or configure this application to listen on another port.
+
+2025-09-30T17:22:59.107+09:00  INFO 25008 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 25008 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T17:22:59.107+09:00  INFO 25008 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T17:22:59.404+09:00  INFO 25008 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T17:22:59.409+09:00  INFO 25008 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T17:22:59.409+09:00  INFO 25008 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T17:22:59.426+09:00  INFO 25008 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T17:22:59.426+09:00  INFO 25008 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 305 ms
+2025-09-30T17:22:59.591+09:00  INFO 25008 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T17:22:59.607+09:00  INFO 25008 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T17:22:59.610+09:00  INFO 25008 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.618 seconds (process running for 0.807)
+2025-09-30T17:23:04.370+09:00  INFO 25008 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30T17:23:04.370+09:00  INFO 25008 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-30T17:23:04.371+09:00  INFO 25008 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-30T17:26:38.210+09:00  INFO 25008 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-30T17:26:38.215+09:00  INFO 25008 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-30T17:26:39.259+09:00  INFO 25086 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 25086 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T17:26:39.260+09:00  INFO 25086 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T17:26:39.576+09:00  INFO 25086 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T17:26:39.580+09:00  INFO 25086 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T17:26:39.580+09:00  INFO 25086 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T17:26:39.593+09:00  INFO 25086 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T17:26:39.594+09:00  INFO 25086 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 317 ms
+2025-09-30T17:26:39.772+09:00  INFO 25086 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T17:26:39.788+09:00  INFO 25086 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T17:26:39.792+09:00  INFO 25086 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.654 seconds (process running for 0.834)
+2025-09-30T17:27:22.901+09:00  INFO 25086 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30T17:27:22.901+09:00  INFO 25086 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-30T17:27:22.902+09:00  INFO 25086 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-30T17:33:21.962+09:00  INFO 25086 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-30T17:33:21.967+09:00  INFO 25086 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-30T17:33:23.196+09:00  INFO 25253 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 25253 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T17:33:23.197+09:00  INFO 25253 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T17:33:23.519+09:00  INFO 25253 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T17:33:23.525+09:00  INFO 25253 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T17:33:23.525+09:00  INFO 25253 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T17:33:23.539+09:00  INFO 25253 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T17:33:23.539+09:00  INFO 25253 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 330 ms
+2025-09-30T17:33:23.700+09:00  INFO 25253 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T17:33:23.716+09:00  INFO 25253 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T17:33:23.720+09:00  INFO 25253 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.649 seconds (process running for 0.846)
+2025-09-30T17:33:32.120+09:00  INFO 25253 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30T17:33:32.120+09:00  INFO 25253 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-30T17:33:32.121+09:00  INFO 25253 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-30T17:34:33.198+09:00  INFO 25253 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-30T17:34:33.203+09:00  INFO 25253 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-30T17:34:34.230+09:00  INFO 25318 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 25318 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T17:34:34.231+09:00  INFO 25318 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T17:34:34.527+09:00  INFO 25318 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T17:34:34.531+09:00  INFO 25318 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T17:34:34.532+09:00  INFO 25318 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T17:34:34.544+09:00  INFO 25318 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T17:34:34.544+09:00  INFO 25318 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 296 ms
+2025-09-30T17:34:34.710+09:00  INFO 25318 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T17:34:34.725+09:00  INFO 25318 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T17:34:34.728+09:00  INFO 25318 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.62 seconds (process running for 0.785)
+2025-09-30T17:34:41.423+09:00  INFO 25318 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30T17:34:41.423+09:00  INFO 25318 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-30T17:34:41.424+09:00  INFO 25318 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-30T17:38:05.366+09:00  INFO 25318 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-30T17:38:05.371+09:00  INFO 25318 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-30T17:38:06.329+09:00  INFO 25383 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 25383 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T17:38:06.330+09:00  INFO 25383 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T17:38:06.622+09:00  INFO 25383 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T17:38:06.626+09:00  INFO 25383 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T17:38:06.626+09:00  INFO 25383 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T17:38:06.638+09:00  INFO 25383 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T17:38:06.638+09:00  INFO 25383 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 293 ms
+2025-09-30T17:38:06.812+09:00  INFO 25383 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T17:38:06.828+09:00  INFO 25383 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T17:38:06.831+09:00  INFO 25383 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.613 seconds (process running for 0.786)
+2025-09-30T17:38:12.527+09:00  INFO 25383 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30T17:38:12.528+09:00  INFO 25383 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-30T17:38:12.528+09:00  INFO 25383 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-09-30T17:41:22.851+09:00  INFO 25383 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-30T17:41:22.856+09:00  INFO 25383 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-30T17:41:23.775+09:00  INFO 25465 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 25465 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T17:41:23.776+09:00  INFO 25465 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T17:41:24.067+09:00  INFO 25465 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T17:41:24.071+09:00  INFO 25465 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T17:41:24.071+09:00  INFO 25465 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T17:41:24.081+09:00  INFO 25465 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T17:41:24.082+09:00  INFO 25465 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 288 ms
+2025-09-30T17:41:24.244+09:00  INFO 25465 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T17:41:24.259+09:00  INFO 25465 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T17:41:24.262+09:00  INFO 25465 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.599 seconds (process running for 0.771)
+2025-09-30T17:41:30.136+09:00  INFO 25465 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30T17:41:30.136+09:00  INFO 25465 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-30T17:41:30.137+09:00  INFO 25465 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-30T17:45:17.902+09:00  INFO 25465 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-30T17:45:17.907+09:00  INFO 25465 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-30T17:45:18.972+09:00  INFO 25609 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 25609 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T17:45:18.973+09:00  INFO 25609 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T17:45:19.278+09:00  INFO 25609 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T17:45:19.282+09:00  INFO 25609 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T17:45:19.283+09:00  INFO 25609 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T17:45:19.296+09:00  INFO 25609 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T17:45:19.297+09:00  INFO 25609 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 311 ms
+2025-09-30T17:45:19.474+09:00  INFO 25609 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T17:45:19.492+09:00  INFO 25609 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T17:45:19.495+09:00  INFO 25609 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.645 seconds (process running for 0.865)
+2025-09-30T17:45:24.063+09:00  INFO 25609 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30T17:45:24.063+09:00  INFO 25609 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-30T17:45:24.064+09:00  INFO 25609 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-30T17:49:45.122+09:00  INFO 25609 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-30T17:49:45.127+09:00  INFO 25609 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-30T17:49:46.162+09:00  INFO 25701 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 25701 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T17:49:46.162+09:00  INFO 25701 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T17:49:46.484+09:00  INFO 25701 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T17:49:46.488+09:00  INFO 25701 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T17:49:46.488+09:00  INFO 25701 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T17:49:46.502+09:00  INFO 25701 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T17:49:46.502+09:00  INFO 25701 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 327 ms
+2025-09-30T17:49:46.660+09:00  INFO 25701 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T17:49:46.675+09:00  INFO 25701 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T17:49:46.679+09:00  INFO 25701 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.635 seconds (process running for 0.832)
+2025-09-30T17:49:51.479+09:00  INFO 25701 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30T17:49:51.479+09:00  INFO 25701 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-30T17:49:51.480+09:00  INFO 25701 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-30T17:50:45.759+09:00  INFO 25701 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-30T17:50:45.764+09:00  INFO 25701 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-30T17:50:46.717+09:00  INFO 25742 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 25742 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T17:50:46.718+09:00  INFO 25742 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T17:50:47.025+09:00  INFO 25742 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T17:50:47.032+09:00  INFO 25742 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T17:50:47.032+09:00  INFO 25742 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T17:50:47.046+09:00  INFO 25742 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T17:50:47.046+09:00  INFO 25742 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 313 ms
+2025-09-30T17:50:47.207+09:00  INFO 25742 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T17:50:47.221+09:00  INFO 25742 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T17:50:47.225+09:00  INFO 25742 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.622 seconds (process running for 0.812)
+2025-09-30T17:50:53.789+09:00  INFO 25742 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30T17:50:53.789+09:00  INFO 25742 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-30T17:50:53.790+09:00  INFO 25742 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-30T18:06:07.851+09:00  INFO 26092 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 26092 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T18:06:07.852+09:00  INFO 26092 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T18:06:08.156+09:00  INFO 26092 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T18:06:08.161+09:00  INFO 26092 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T18:06:08.161+09:00  INFO 26092 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T18:06:08.177+09:00  INFO 26092 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T18:06:08.178+09:00  INFO 26092 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 313 ms
+2025-09-30T18:06:08.348+09:00  INFO 26092 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T18:06:08.366+09:00  INFO 26092 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T18:06:08.370+09:00  INFO 26092 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.632 seconds (process running for 0.823)
+2025-09-30T18:06:57.346+09:00  INFO 26092 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30T18:06:57.346+09:00  INFO 26092 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-30T18:06:57.347+09:00  INFO 26092 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-30T18:08:41.683+09:00  INFO 26092 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-30T18:08:41.688+09:00  INFO 26092 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-30T18:08:42.768+09:00  INFO 26143 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 26143 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-09-30T18:08:42.769+09:00  INFO 26143 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-09-30T18:08:43.055+09:00  INFO 26143 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-09-30T18:08:43.069+09:00  INFO 26143 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-30T18:08:43.069+09:00  INFO 26143 --- [JiggleBoggle1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30T18:08:43.087+09:00  INFO 26143 --- [JiggleBoggle1] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-30T18:08:43.087+09:00  INFO 26143 --- [JiggleBoggle1] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 307 ms
+2025-09-30T18:08:43.237+09:00  INFO 26143 --- [JiggleBoggle1] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-30T18:08:43.253+09:00  INFO 26143 --- [JiggleBoggle1] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-09-30T18:08:43.256+09:00  INFO 26143 --- [JiggleBoggle1] [main] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.603 seconds (process running for 0.796)
+2025-09-30T18:08:48.257+09:00  INFO 26143 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30T18:08:48.257+09:00  INFO 26143 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-30T18:08:48.258+09:00  INFO 26143 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

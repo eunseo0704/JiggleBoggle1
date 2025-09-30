@@ -21,7 +21,7 @@ body {
 }
 .menu {
   display: flex;
-  gap: 30px;
+  gap: 100px;
 }
 .auth {
   display: flex;
