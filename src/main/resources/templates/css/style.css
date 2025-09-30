@@ -13,6 +13,7 @@ body {
   align-items: center;
   padding: 15px 40px;
   border-bottom: 1px solid #ccc;
+  cursor: pointer;
 }
 .menu a {
   text-decoration: none;
