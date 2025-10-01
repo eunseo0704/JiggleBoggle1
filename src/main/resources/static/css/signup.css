@@ -1,0 +1,92 @@
+@import url('https://cdn.jsdelivr.net/gh/fonts-archive/BMKkubulim/BMKkubulim.css');
+
+body {
+    margin: 0;
+    font-family: 'BM kkubulim','Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+
+.left {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.left h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.input-box {
+    margin-bottom: 15px;
+}
+.input-box input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.btn-primary {
+    background-color: black;
+    color: white;
+}
+.btn-sns {
+    border: 1px solid #ccc;
+    background: white;
+}
+.right {
+    width: 50%;
+    background-color: #fffdf8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;  /* 세로 가운데 정렬 */
+}
+
+.logo-img {
+    width: 90px;   /* 크기는 원하는 대로 조절 */
+    height: auto;
+    margin-right: 8px;
+}
+
+.logo-text {
+    font-size: 32px; /* 글자 크기 맞춤 */
+    font-weight: bold;
+}
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.food-grid img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.bottom-text {
+    margin-top: 15px;
+    font-size: 13px;
+}
+.bottom-text a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}

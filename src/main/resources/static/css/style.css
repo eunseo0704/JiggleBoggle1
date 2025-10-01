@@ -81,25 +81,25 @@ body {
   background-color: #e0e0e0;
   border-radius: 15px;
   justify-content: center;
-  margin: 0 auto; /*margin: 0 auto; 는 display: block 속성을 가진 요소(div 등)를 가로 중앙에 정렬
+    /*margin: 0 auto; 는 display: block 속성을 가진 요소(div 등)를 가로 중앙에 정렬
 
-    0: 위/아래 여백을 0으로 설정
+      0: 위/아래 여백을 0으로 설정
 
-    auto: 왼쪽/오른쪽 여백을 자동으로 계산하여 동일하게 분배*/
-  margin-top: 30px;
+      auto: 왼쪽/오른쪽 여백을 자동으로 계산하여 동일하게 분배*/
+    margin: 30px auto 0;
 }
 
 .signup {
-  width: 100%;
-  padding: 15px 0;
-  background-color: black;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: 'BM kkubulim';
+    width: 100%;
+    padding: 15px 0;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'BM kkubulim', serif;
 }
 .join-text {
   margin-top: 15px; /*버튼과 텍스트 사이 간격*/

@@ -12,4 +12,13 @@ public class MainController {
         return "main/MainPage";
     }
 
+    @GetMapping("/signup")
+    public String signup() {
+
+        return "comm/Signup";
+    }
+
+
+
+
 }
