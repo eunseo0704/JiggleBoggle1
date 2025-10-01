@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!-- fragments/header.html -->
+<header th:fragment="site-header" class="navbar">
+    <div class="logo-container">
+        <img src="/imgs/JiggleBoggle.svg" class="logo-img" alt="logo"/>
+        <span>JiggleBoggle</span>
+    </div>
+    <nav class="menu">
+        <a href="#">메뉴</a>
+        <a href="#">검색</a>
+        <a href="#">AI레시피</a>
+        <a href="#">지글뽀글</a>
+    </nav>
+    <div class="auth">
+        <a th:href="@{/login}" class="login-btn">로그인</a>
+        <a th:href="@{/signup}" class="signup-btn">회원가입</a>
+    </div>
+</header>
