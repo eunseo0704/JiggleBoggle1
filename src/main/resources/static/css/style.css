@@ -1,9 +1,12 @@
+
+@import url('https://cdn.jsdelivr.net/gh/fonts-archive/BMKkubulim/BMKkubulim.css');
+
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: "배달의민족 꾸불림";
+  font-family: 'BM kkubulim','Arial', sans-serif;
   overflow-x: scroll;
 }
 
@@ -96,7 +99,7 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-family: "배달의민족 꾸불림";
+  font-family: 'BM kkubulim';
 }
 .join-text {
   margin-top: 15px; /*버튼과 텍스트 사이 간격*/
@@ -106,7 +109,7 @@ body {
 .food-imgs {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 16px;
 }
 
