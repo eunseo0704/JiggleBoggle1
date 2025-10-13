@@ -3,7 +3,7 @@
 <header th:fragment="site-header" class="navbar">
     <div class="logo-container">
         <img src="/imgs/JiggleBoggle.svg" class="logo-img" alt="logo"/>
-        <span>JiggleBoggle</span>
+        <span id="moveIcon">JiggleBoggle</span>
     </div>
     <nav class="menu">
         <a href="#">메뉴</a>
@@ -16,3 +16,5 @@
         <a th:href="@{/signup}" class="signup-btn">회원가입</a>
     </div>
 </header>
+
+

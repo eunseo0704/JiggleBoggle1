@@ -1,98 +1,162 @@
 
 @import url('https://cdn.jsdelivr.net/gh/fonts-archive/BMKkubulim/BMKkubulim.css');
-
+/* ===== 기본 설정 ===== */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body {
-    margin: 0;
     font-family: 'BM kkubulim','Arial', sans-serif;
-    display: flex;
+    background-color: #fffdfa;
     height: 100vh;
+    overflow: hidden;
 }
+
+/* ===== 메인 콘텐츠 ===== */
+.content {
+    display: flex;
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+}
+
+/* 왼쪽 (로그인 폼) */
 .left {
-    width: 50%;
-    padding: 40px;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: top;*/
+    align-items: center;
+    background: #ffffff;
+    padding: 90px;
+    overflow-y: auto;
 }
-.left h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-.input-box {
-    margin-bottom: 15px;
-}
-.input-box input {
+
+.login-box {
     width: 100%;
-    padding: 14px;
-    border-radius: 8px;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-box h2 {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-box input {
+    padding: 12px;
     border: 1px solid #ccc;
+    border-radius: 8px;
     font-size: 14px;
 }
 
-.btn-box{
-    display: flex;
-    text-align: center;
+.login-box button {
+    background: #000;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-.btn {
-    width: 100%;
-    padding: 14px;
-    border-radius: 8px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 10px;
+.login-box button:hover {
+    background: #333;
 }
-.btn-primary {
-    background-color: black;
-    color: white;
+
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    color: #aaa;
 }
-.btn-sns {
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     border: 1px solid #ccc;
-    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
 }
+
+.social-btn:hover {
+    background-color: #f8f8f8;
+}
+
+.bottom-text {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.bottom-text a {
+    text-decoration: underline;
+    color: black;
+}
+
+/* 오른쪽 (로고 + 이미지 영역) */
 .right {
-    width: 50%;
-    background-color: #fffdf8;
+    flex: 1;
+    background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 40px;
+    overflow-y: auto;
 }
-.logo {
-    font-size: 40px;
-    display: flex;
-    align-items: center;      /* 세로 가운데 정렬 */
-    gap: 12px;                /* 로고와 텍스트 사이 여백(필요에 따라 조정) */
-    padding: 8px 16px;
+
+.logo-section {
+    text-align: center;
+    margin-bottom: 30px;
 }
+
+.logo-section img.logo-icon {
+    width: 180px;
+    height: 120px;
+    margin-bottom: 10px;
+
+
+}
+
 .food-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
+
 .food-grid img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+    width: 100%;
     border-radius: 12px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    transition: transform 0.2s;
 }
-.bottom-text {
-    margin-top: 15px;
-    font-size: 13px;
+
+.food-grid img:hover {
+    transform: scale(1.05);
 }
-.bottom-text a {
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-}
-.logo-img_header {
-    width: 65px;
-    height: 65px;
-    display: block;           /* inline 이미지의 간헐적 여백 제거 */
-    object-fit: contain;
+
+/* ===== 반응형 ===== */
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        flex: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
