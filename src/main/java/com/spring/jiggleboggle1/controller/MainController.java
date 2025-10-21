@@ -9,7 +9,24 @@ public class MainController {
     @GetMapping("/MainPage")
     public String MainPage() {
 
-        return "html/MainPage";
+        return "main/MainPage";
     }
+
+    @GetMapping("/signup")
+    public String signup() {
+
+       // return "comm/Signup";
+        return "comm/Signup";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+
+       // return "comm/Signup";
+        return "comm/login";
+    }
+
+
+
 
 }
