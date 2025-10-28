@@ -294,3 +294,857 @@
 2025-10-02T09:36:14.637+09:00  INFO 22412 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-10-02T09:36:14.638+09:00  INFO 22412 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2025-10-02T09:36:15.057+09:00  WARN 22412 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:09:56.067+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 87732 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T17:09:56.068+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:09:56.082+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T17:09:56.082+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T17:09:56.550+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T17:09:56.556+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:09:56.556+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T17:09:56.569+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:09:56.569+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 486 ms
+2025-10-28T17:09:56.795+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-10-28T17:09:56.808+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T17:09:56.826+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-10-28T17:09:56.831+09:00  INFO 87732 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.911 seconds (process running for 1.419)
+2025-10-28T17:10:09.060+09:00  INFO 87732 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:10:09.061+09:00  INFO 87732 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:10:09.061+09:00  INFO 87732 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-28T17:10:09.163+09:00  WARN 87732 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:10:11.333+09:00  WARN 87732 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:12:05.169+09:00  INFO 87732 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T17:12:05.176+09:00  INFO 87732 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T17:12:06.489+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 87786 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T17:12:06.491+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:12:06.511+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T17:12:06.511+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T17:12:06.919+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T17:12:06.924+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:12:06.924+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T17:12:06.937+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:12:06.937+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 426 ms
+2025-10-28T17:12:07.123+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-10-28T17:12:07.135+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T17:12:07.151+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-10-28T17:12:07.156+09:00  INFO 87786 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.83 seconds (process running for 1.198)
+2025-10-28T17:12:16.268+09:00  INFO 87786 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:12:16.268+09:00  INFO 87786 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:12:16.269+09:00  INFO 87786 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T17:12:16.365+09:00  WARN 87786 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:12:18.095+09:00  WARN 87786 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:12:34.748+09:00  WARN 87786 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:12:54.949+09:00  WARN 87786 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:13:05.495+09:00  WARN 87786 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:13:07.288+09:00  WARN 87786 --- [JiggleBoggle1] [http-nio-9191-exec-9] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-9][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:13:08.084+09:00  WARN 87786 --- [JiggleBoggle1] [http-nio-9191-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-8][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:13:16.020+09:00  WARN 87786 --- [JiggleBoggle1] [http-nio-9191-exec-6] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-6][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:13:17.293+09:00  WARN 87786 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:13:43.368+09:00  WARN 87786 --- [JiggleBoggle1] [http-nio-9191-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-4][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:15:30.411+09:00  INFO 87786 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T17:15:30.417+09:00  INFO 87786 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T17:15:31.838+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 87849 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T17:15:31.839+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:15:31.852+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T17:15:31.852+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T17:15:32.247+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T17:15:32.253+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:15:32.253+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T17:15:32.269+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:15:32.269+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 417 ms
+2025-10-28T17:15:32.475+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-10-28T17:15:32.488+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T17:15:32.510+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-10-28T17:15:32.516+09:00  INFO 87849 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.816 seconds (process running for 1.181)
+2025-10-28T17:15:39.833+09:00  INFO 87849 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:15:39.833+09:00  INFO 87849 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:15:39.834+09:00  INFO 87849 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-28T17:15:39.930+09:00  WARN 87849 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:15:41.307+09:00  WARN 87849 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:15:56.318+09:00  WARN 87849 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:16:51.424+09:00  INFO 87849 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T17:16:51.431+09:00  INFO 87849 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T17:16:52.859+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 87893 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T17:16:52.860+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:16:52.873+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T17:16:52.873+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T17:16:53.243+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T17:16:53.248+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:16:53.248+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T17:16:53.260+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:16:53.260+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 387 ms
+2025-10-28T17:16:53.440+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-10-28T17:16:53.450+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T17:16:53.465+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-10-28T17:16:53.470+09:00  INFO 87893 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.75 seconds (process running for 1.107)
+2025-10-28T17:17:04.955+09:00  INFO 87893 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:17:04.955+09:00  INFO 87893 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:17:04.956+09:00  INFO 87893 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T17:17:05.051+09:00  WARN 87893 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:17:06.481+09:00  WARN 87893 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:17:27.118+09:00  WARN 87893 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:17:28.701+09:00  WARN 87893 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:17:29.163+09:00  WARN 87893 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:20:03.428+09:00  INFO 87893 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T17:20:03.435+09:00  INFO 87893 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T17:20:04.731+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 87980 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T17:20:04.731+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:20:04.745+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T17:20:04.745+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T17:20:05.124+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T17:20:05.129+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:20:05.129+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T17:20:05.142+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:20:05.142+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 397 ms
+2025-10-28T17:20:05.328+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-10-28T17:20:05.340+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T17:20:05.356+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-10-28T17:20:05.361+09:00  INFO 87980 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.772 seconds (process running for 1.138)
+2025-10-28T17:20:21.384+09:00  INFO 87980 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T17:20:21.391+09:00  INFO 87980 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T17:20:22.558+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 88002 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T17:20:22.558+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:20:22.571+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T17:20:22.571+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T17:20:22.921+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T17:20:22.926+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:20:22.926+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T17:20:22.937+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:20:22.937+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 365 ms
+2025-10-28T17:20:23.103+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-10-28T17:20:23.113+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T17:20:23.126+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-10-28T17:20:23.133+09:00  INFO 88002 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.711 seconds (process running for 1.058)
+2025-10-28T17:20:31.302+09:00  INFO 88002 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:20:31.302+09:00  INFO 88002 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:20:31.303+09:00  INFO 88002 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T17:20:31.397+09:00  WARN 88002 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:20:32.988+09:00  WARN 88002 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:20:57.098+09:00 ERROR 88002 --- [JiggleBoggle1] [http-nio-9191-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.spring.jiggleboggle1.mapper.UserMapper.setSignUp] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.spring.jiggleboggle1.mapper.UserMapper.setSignUp
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:96) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:36) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.19.jar:3.5.19]
+	at jdk.proxy3/jdk.proxy3.$Proxy69.setSignUp(Unknown Source) ~[na:na]
+	at com.spring.jiggleboggle1.service.UserService.setSignUp(UserService.java:17) ~[main/:na]
+	at com.spring.jiggleboggle1.controller.UserController.signUpUserData(UserController.java:22) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-10-28T17:30:58.769+09:00  INFO 88002 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T17:30:58.776+09:00  INFO 88002 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T17:31:00.083+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 88217 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T17:31:00.084+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:31:00.097+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T17:31:00.097+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T17:31:00.451+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T17:31:00.456+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:31:00.456+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T17:31:00.467+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:31:00.468+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 370 ms
+2025-10-28T17:31:00.680+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-10-28T17:31:00.691+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T17:31:00.705+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-10-28T17:31:00.708+09:00  INFO 88217 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.766 seconds (process running for 1.138)
+2025-10-28T17:31:17.190+09:00  INFO 88217 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:31:17.190+09:00  INFO 88217 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:31:17.191+09:00  INFO 88217 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T17:31:17.290+09:00  WARN 88217 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:31:19.053+09:00  WARN 88217 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:32:04.843+09:00 ERROR 88217 --- [JiggleBoggle1] [http-nio-9191-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.spring.jiggleboggle1.mapper.UserMapper.setSignUp] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.spring.jiggleboggle1.mapper.UserMapper.setSignUp
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:96) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:36) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.19.jar:3.5.19]
+	at jdk.proxy3/jdk.proxy3.$Proxy69.setSignUp(Unknown Source) ~[na:na]
+	at com.spring.jiggleboggle1.service.UserService.setSignUp(UserService.java:17) ~[main/:na]
+	at com.spring.jiggleboggle1.controller.UserController.signUpUserData(UserController.java:22) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-10-28T17:32:29.645+09:00  INFO 88217 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T17:32:29.651+09:00  INFO 88217 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T17:32:30.920+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 88264 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T17:32:30.920+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:32:30.933+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T17:32:30.933+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T17:32:31.285+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T17:32:31.290+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:32:31.290+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T17:32:31.302+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:32:31.302+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 369 ms
+2025-10-28T17:32:31.505+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-10-28T17:32:31.516+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T17:32:31.532+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-10-28T17:32:31.536+09:00  INFO 88264 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.758 seconds (process running for 1.123)
+2025-10-28T17:32:44.346+09:00  INFO 88264 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:32:44.346+09:00  INFO 88264 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:32:44.347+09:00  INFO 88264 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T17:32:44.468+09:00  WARN 88264 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:32:46.248+09:00  WARN 88264 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:33:24.629+09:00  INFO 88264 --- [JiggleBoggle1] [http-nio-9191-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T17:33:25.216+09:00  INFO 88264 --- [JiggleBoggle1] [http-nio-9191-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ec5854e
+2025-10-28T17:33:25.221+09:00  INFO 88264 --- [JiggleBoggle1] [http-nio-9191-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T17:33:29.655+09:00 ERROR 88264 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'USER_ID' cannot be null
+### The error may exist in file [/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/resources/main/mapper/UserMapper.xml]
+### The error may involve com.spring.jiggleboggle1.mapper.UserMapper.setSignUp-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO USER_MASTER (             USER_ID,             USER_NAME,             USER_PSWD,             USER_MAIL,             JOIN_DATE,             USER_ROLE,             USER_STATUS          ) VALUES (?,                   ?,                   ?,                   ?,                   NOW(),                   'U',                   'Y'                  )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'USER_ID' cannot be null
+; Column 'USER_ID' cannot be null] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Column 'USER_ID' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:383) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy68.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:224) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.19.jar:3.5.19]
+	at jdk.proxy3/jdk.proxy3.$Proxy69.setSignUp(Unknown Source) ~[na:na]
+	at com.spring.jiggleboggle1.service.UserService.setSignUp(UserService.java:17) ~[main/:na]
+	at com.spring.jiggleboggle1.controller.UserController.signUpUserData(UserController.java:22) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-10-28T17:36:14.448+09:00  WARN 88264 --- [JiggleBoggle1] [http-nio-9191-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-4][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:37:50.954+09:00  INFO 88264 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T17:37:50.960+09:00  INFO 88264 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T17:37:50.962+09:00  INFO 88264 --- [JiggleBoggle1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-28T17:37:50.966+09:00  INFO 88264 --- [JiggleBoggle1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-28T17:37:52.336+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 88361 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T17:37:52.337+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:37:52.351+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T17:37:52.351+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T17:37:52.726+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T17:37:52.731+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:37:52.731+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T17:37:52.744+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:37:52.744+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 393 ms
+2025-10-28T17:37:52.946+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-10-28T17:37:52.957+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T17:37:52.974+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-10-28T17:37:52.978+09:00  INFO 88361 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.779 seconds (process running for 1.14)
+2025-10-28T17:38:15.237+09:00  INFO 88361 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:38:15.238+09:00  INFO 88361 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:38:15.238+09:00  INFO 88361 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-28T17:38:15.334+09:00  WARN 88361 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:38:16.423+09:00  WARN 88361 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:38:29.219+09:00  INFO 88361 --- [JiggleBoggle1] [http-nio-9191-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T17:38:29.741+09:00  INFO 88361 --- [JiggleBoggle1] [http-nio-9191-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3eaadd7c
+2025-10-28T17:38:29.745+09:00  INFO 88361 --- [JiggleBoggle1] [http-nio-9191-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T17:38:33.403+09:00 ERROR 88361 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'USER_NAME' cannot be null
+### The error may exist in file [/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/resources/main/mapper/UserMapper.xml]
+### The error may involve com.spring.jiggleboggle1.mapper.UserMapper.setSignUp-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO USER_MASTER (             USER_ID,             USER_NAME,             USER_PSWD,             USER_MAIL,             JOIN_DATE,             USER_ROLE,             USER_STATUS          ) VALUES (?,                   ?,                   ?,                   ?,                   NOW(),                   'U',                   'Y'                  )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'USER_NAME' cannot be null
+; Column 'USER_NAME' cannot be null] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Column 'USER_NAME' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:383) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy68.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:224) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.19.jar:3.5.19]
+	at jdk.proxy3/jdk.proxy3.$Proxy69.setSignUp(Unknown Source) ~[na:na]
+	at com.spring.jiggleboggle1.service.UserService.setSignUp(UserService.java:17) ~[main/:na]
+	at com.spring.jiggleboggle1.controller.UserController.signUpUserData(UserController.java:22) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-10-28T17:39:24.307+09:00  WARN 88361 --- [JiggleBoggle1] [http-nio-9191-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-5][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:39:34.284+09:00  WARN 88361 --- [JiggleBoggle1] [http-nio-9191-exec-5] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-5][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:39:39.423+09:00  INFO 88361 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T17:39:39.428+09:00  INFO 88361 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T17:39:39.430+09:00  INFO 88361 --- [JiggleBoggle1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-28T17:39:39.433+09:00  INFO 88361 --- [JiggleBoggle1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-28T17:39:40.709+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 88419 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T17:39:40.710+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:39:40.722+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T17:39:40.723+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T17:39:41.052+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T17:39:41.057+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:39:41.057+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T17:39:41.069+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:39:41.069+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 346 ms
+2025-10-28T17:39:41.269+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-10-28T17:39:41.280+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T17:39:41.295+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-10-28T17:39:41.299+09:00  INFO 88419 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.73 seconds (process running for 1.141)
+2025-10-28T17:39:51.907+09:00  INFO 88419 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:39:51.907+09:00  INFO 88419 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:39:51.909+09:00  INFO 88419 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-28T17:39:52.005+09:00  WARN 88419 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:39:53.384+09:00  WARN 88419 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:40:05.242+09:00  INFO 88419 --- [JiggleBoggle1] [http-nio-9191-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T17:40:05.764+09:00  INFO 88419 --- [JiggleBoggle1] [http-nio-9191-exec-6] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b3dfdc5
+2025-10-28T17:40:05.768+09:00  INFO 88419 --- [JiggleBoggle1] [http-nio-9191-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T17:40:09.989+09:00 ERROR 88419 --- [JiggleBoggle1] [http-nio-9191-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'USER_NICK_NAME' doesn't have a default value
+### The error may exist in file [/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/resources/main/mapper/UserMapper.xml]
+### The error may involve com.spring.jiggleboggle1.mapper.UserMapper.setSignUp-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO USER_MASTER (             USER_ID,             USER_NAME,             USER_PSWD,             USER_MAIL,             JOIN_DATE,             USER_ROLE,             USER_STATUS          ) VALUES (?,                   ?,                   ?,                   ?,                   NOW(),                   'U',                   'Y'                  )
+### Cause: java.sql.SQLException: Field 'USER_NICK_NAME' doesn't have a default value
+; Field 'USER_NICK_NAME' doesn't have a default value] with root cause
+
+java.sql.SQLException: Field 'USER_NICK_NAME' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:383) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy68.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:224) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.19.jar:3.5.19]
+	at jdk.proxy3/jdk.proxy3.$Proxy69.setSignUp(Unknown Source) ~[na:na]
+	at com.spring.jiggleboggle1.service.UserService.setSignUp(UserService.java:17) ~[main/:na]
+	at com.spring.jiggleboggle1.controller.UserController.signUpUserData(UserController.java:22) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-10-28T17:40:39.544+09:00  WARN 88419 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:40:41.948+09:00  WARN 88419 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:42:14.157+09:00  WARN 88419 --- [JiggleBoggle1] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s278ms).
+2025-10-28T17:42:15.906+09:00 ERROR 88419 --- [JiggleBoggle1] [http-nio-9191-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLException: Field 'USER_NICK_NAME' doesn't have a default value
+### The error may exist in file [/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/resources/main/mapper/UserMapper.xml]
+### The error may involve com.spring.jiggleboggle1.mapper.UserMapper.setSignUp-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO USER_MASTER (             USER_ID,             USER_NAME,             USER_PSWD,             USER_MAIL,             JOIN_DATE,             USER_ROLE,             USER_STATUS          ) VALUES (?,                   ?,                   ?,                   ?,                   NOW(),                   'U',                   'Y'                  )
+### Cause: java.sql.SQLException: Field 'USER_NICK_NAME' doesn't have a default value
+; Field 'USER_NICK_NAME' doesn't have a default value] with root cause
+
+java.sql.SQLException: Field 'USER_NICK_NAME' doesn't have a default value
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:383) ~[mysql-connector-j-9.4.0.jar:9.4.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:333) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy68.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:224) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.19.jar:3.5.19]
+	at jdk.proxy3/jdk.proxy3.$Proxy69.setSignUp(Unknown Source) ~[na:na]
+	at com.spring.jiggleboggle1.service.UserService.setSignUp(UserService.java:17) ~[main/:na]
+	at com.spring.jiggleboggle1.controller.UserController.signUpUserData(UserController.java:22) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-10-28T17:43:17.490+09:00  WARN 88419 --- [JiggleBoggle1] [http-nio-9191-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-8][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:43:19.009+09:00  WARN 88419 --- [JiggleBoggle1] [http-nio-9191-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-10][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:43:43.306+09:00  WARN 88419 --- [JiggleBoggle1] [http-nio-9191-exec-3] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-3][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:50:30.164+09:00  WARN 88419 --- [JiggleBoggle1] [http-nio-9191-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-8][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T17:50:48.079+09:00  INFO 88419 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T17:50:48.080+09:00  INFO 88419 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T17:50:48.083+09:00  INFO 88419 --- [JiggleBoggle1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-28T17:50:48.087+09:00  INFO 88419 --- [JiggleBoggle1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-28T17:50:49.744+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 88615 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T17:50:49.745+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T17:50:49.758+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T17:50:49.758+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T17:50:50.371+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T17:50:50.378+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T17:50:50.378+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T17:50:50.394+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T17:50:50.394+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 635 ms
+2025-10-28T17:50:50.667+09:00  WARN 88615 --- [JiggleBoggle1] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ad598eda-96c6-445b-a6e3-b40057e08e0e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-28T17:50:50.669+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-28T17:50:50.711+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-10-28T17:50:50.721+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T17:50:50.734+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-10-28T17:50:50.737+09:00  INFO 88615 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 1.13 seconds (process running for 1.504)
+2025-10-28T17:51:00.127+09:00  INFO 88615 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T17:51:00.127+09:00  INFO 88615 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T17:51:00.128+09:00  INFO 88615 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T18:03:23.419+09:00  INFO 88615 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T18:03:23.424+09:00  INFO 88615 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T18:04:35.140+09:00  INFO 88858 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 88858 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T18:04:35.141+09:00  INFO 88858 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T18:04:35.152+09:00  INFO 88858 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T18:04:35.152+09:00  INFO 88858 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T18:04:35.497+09:00  INFO 88858 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T18:04:35.501+09:00  INFO 88858 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T18:04:35.501+09:00  INFO 88858 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T18:04:35.512+09:00  INFO 88858 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T18:04:35.512+09:00  INFO 88858 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 359 ms
+2025-10-28T18:04:35.522+09:00 ERROR 88858 --- [JiggleBoggle1] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main/com/spring/jiggleboggle1/config/JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtUtil': Injection of autowired dependencies failed
+2025-10-28T18:04:35.529+09:00  INFO 88858 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-28T18:04:35.533+09:00  WARN 88858 --- [JiggleBoggle1] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-10-28T18:04:35.535+09:00  INFO 88858 --- [JiggleBoggle1] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-28T18:04:35.541+09:00 ERROR 88858 --- [JiggleBoggle1] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:170) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar:3.5.6]
+	at com.spring.jiggleboggle1.JiggleBoggle1Application.main(JiggleBoggle1Application.java:11) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.6.jar:3.5.6]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.5.6.jar:3.5.6]
+	... 11 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main/com/spring/jiggleboggle1/config/JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtUtil': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:230) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:184) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:179) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:164) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:96) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4464) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:773) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:438) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.5.6.jar:3.5.6]
+	... 16 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtil': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 57 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'jwt.secret' in value "${jwt.secret}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81) ~[spring-core-6.2.11.jar:6.2.11]
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423) ~[spring-core-6.2.11.jar:6.2.11]
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128) ~[spring-core-6.2.11.jar:6.2.11]
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118) ~[spring-core-6.2.11.jar:6.2.11]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114) ~[spring-core-6.2.11.jar:6.2.11]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:293) ~[spring-core-6.2.11.jar:6.2.11]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:264) ~[spring-core-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:186) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:970) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1665) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 68 common frames omitted
+
+2025-10-28T18:06:10.849+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Starting JiggleBoggle1Application using Java 21.0.6 with PID 88912 (/Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1/build/classes/java/main started by gungoguma in /Users/gungoguma/Desktop/나르샤 지글뽀글/JiggleBoggle1)
+2025-10-28T18:06:10.849+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T18:06:10.862+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-28T18:06:10.862+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-28T18:06:11.202+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9191 (http)
+2025-10-28T18:06:11.206+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T18:06:11.207+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T18:06:11.217+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-28T18:06:11.217+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 355 ms
+2025-10-28T18:06:11.469+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-10-28T18:06:11.479+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T18:06:11.491+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9191 (http) with context path '/'
+2025-10-28T18:06:11.494+09:00  INFO 88912 --- [JiggleBoggle1] [restartedMain] c.s.j.JiggleBoggle1Application           : Started JiggleBoggle1Application in 0.769 seconds (process running for 1.009)
+2025-10-28T18:06:20.748+09:00  INFO 88912 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-28T18:06:20.748+09:00  INFO 88912 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-28T18:06:20.749+09:00  INFO 88912 --- [JiggleBoggle1] [http-nio-9191-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-28T18:06:20.848+09:00  WARN 88912 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T18:06:22.206+09:00  WARN 88912 --- [JiggleBoggle1] [http-nio-9191-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-1][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T18:06:27.945+09:00  INFO 88912 --- [JiggleBoggle1] [http-nio-9191-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-28T18:06:28.016+09:00  INFO 88912 --- [JiggleBoggle1] [http-nio-9191-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d225ec5
+2025-10-28T18:06:28.017+09:00  INFO 88912 --- [JiggleBoggle1] [http-nio-9191-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-28T18:06:28.043+09:00  WARN 88912 --- [JiggleBoggle1] [http-nio-9191-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-2][main/MainPage] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template main/MainPage, line 13, col 14. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T18:06:36.644+09:00  WARN 88912 --- [JiggleBoggle1] [http-nio-9191-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-9191-exec-2][comm/Signup] Deprecated unwrapped fragment expression "fragments/header :: site-header" found in template comm/Signup, line 15, col 10. Please use the complete syntax of fragment expressions instead ("~{fragments/header :: site-header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-10-28T18:11:45.127+09:00  INFO 88912 --- [JiggleBoggle1] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T18:11:45.128+09:00  INFO 88912 --- [JiggleBoggle1] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T18:11:45.132+09:00  INFO 88912 --- [JiggleBoggle1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-28T18:11:45.134+09:00  INFO 88912 --- [JiggleBoggle1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

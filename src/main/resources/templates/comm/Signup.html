@@ -11,7 +11,7 @@
     <title>JiggleBoggle</title>
 </head>
 <body>
-<form id="mainForm" name="mainForm" method="get">
+<form id="mainForm" name="mainForm" method="post" th:action="@{/signUpUserData}">
     <div th:insert="fragments/header :: site-header"></div>
 
     <main class="content">
@@ -19,11 +19,11 @@
         <section class="left">
             <div class="login-box">
                 <h2>Welcome!</h2>
-                <input type="text" placeholder="이름을 입력하세요">
-                <input type="email" placeholder="이메일을 입력하세요">
-                <input type="password" placeholder="비밀번호를 입력하세요">
-                <input type="password" placeholder="비밀번호 확인">
-                <button class="btn btn-primary">회원가입</button>
+                <input type="text" id="userId" name="userId" placeholder="아이디를 입력하세요">
+                <input type="text" id="userName" name="userName" placeholder="이름을 입력하세요">
+                <input type="email"  id="userMail" name="userMail"  placeholder="이메일을 입력하세요">
+                <input type="password"  id="userPswd" name="userPswd"  placeholder="비밀번호를 입력하세요">
+                <button type="submit" class="btn btn-primary">회원가입</button>
             </div>
         </section>
 
