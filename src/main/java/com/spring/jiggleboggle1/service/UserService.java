@@ -33,5 +33,19 @@ public class UserService {
             log.error("회원가입 중 오류 발생: {}", e.getMessage(), e);
             return -1; // 예외 발생시 -1
         }
-}
+    }
+
+    public UserVO loginUser(String userId, String userPswd) {
+
+        UserVO userVo = userMapper.findByUserId(userId);
+
+        if (userVo != null && passwordEncoder.matches(userPswd, userVo.getUserPswd())) {
+            return userVo;
+        }
+        return null;
+    }
+
+
+
+
 }

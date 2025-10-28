@@ -14,5 +14,6 @@ public class UserVO {
     private String userPswd;
     private String userNickName;
     private String userTel;
+    private String joinDate;
 
 }
