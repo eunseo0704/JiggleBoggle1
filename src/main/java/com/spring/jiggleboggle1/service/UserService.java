@@ -27,9 +27,9 @@ public class UserService {
             String encodedPassword = passwordEncoder.encode(userVo.getUserPswd());
             userVo.setUserPswd(encodedPassword);
 
-             return userMapper.setSignUp(userVo);
+            return userMapper.setSignUp(userVo);
 
-    } catch (Exception e) {
+        } catch (Exception e) {
             log.error("회원가입 중 오류 발생: {}", e.getMessage(), e);
             return -1; // 예외 발생시 -1
         }

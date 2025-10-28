@@ -22,14 +22,14 @@ public class MainController {
     @GetMapping("/signup")
     public String signup() {
 
-       // return "comm/Signup";
+        // return "comm/Signup";
         return "comm/Signup";
     }
 
     @GetMapping("/login")
     public String login() {
 
-       // return "comm/Signup";
+        // return "comm/Signup";
         return "comm/login";
     }
 
