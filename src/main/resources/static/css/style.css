@@ -22,6 +22,7 @@ body {
 .menu a {
   text-decoration: none;
   color: black;
+  font-size: 20px;
 }
 .menu {
   display: flex;
@@ -32,9 +33,11 @@ body {
   gap: 25px;
   align-items: center;
 }
+
 .auth a {
   text-decoration: none;
   color: black;
+  font-size: 18px;
 }
 
 .auth .signup-btn {
@@ -50,4 +53,20 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.user-logo{
+    width: 30px;
+    height: 30px;
+}
+
+.login-auth {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.login-auth a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
 }

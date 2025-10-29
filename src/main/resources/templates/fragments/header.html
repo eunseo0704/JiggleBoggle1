@@ -15,8 +15,9 @@
         <a th:href="@{/login}" class="login-btn">로그인</a>
         <a th:href="@{/signup}" class="signup-btn">회원가입</a>
     </div>
-    <div class="auth" th:if="${isLoggedIn}">
-        <a th:href="@{/myPage}" class="login-btn" th:text="${userName + '님'}"></a>
+    <div class="login-auth" th:if="${isLoggedIn}">
+        <img th:src="@{/imgs/biz/user-icon.jpeg}" class="user-logo">
+        <a th:href="@{/myPage}" class="mypage-btn" th:text="${userName + '님'}"></a>
     </div>
 </header>
 
