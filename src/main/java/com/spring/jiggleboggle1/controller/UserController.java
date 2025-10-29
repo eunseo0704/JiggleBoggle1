@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -56,12 +57,24 @@ public class UserController {
             jwtCookie.setMaxAge(3600);
             response.addCookie(jwtCookie);
 
-            return "redirect:/MainPage";
+            return "redirect:/UserMainPage";
 
         } else {
             redirectAttributes.addFlashAttribute("msg", "아이디 또는 비밀번호가 올바르지 않습니다.");
             return "redirect:/login";
         }
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpServletResponse response, RedirectAttributes redirectAttributes) {
+        Cookie jwtCookie = new Cookie("JWT_TOKEN", null);
+        jwtCookie.setHttpOnly(true);
+        jwtCookie.setPath("/");
+        jwtCookie.setMaxAge(0); // 쿠키 삭제
+        response.addCookie(jwtCookie);
+
+        redirectAttributes.addFlashAttribute("msg", "로그아웃 되었습니다.");
+        return "redirect:/login";
     }
 
 

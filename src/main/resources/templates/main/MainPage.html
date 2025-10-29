@@ -10,7 +10,12 @@
   </head>
   <body>
       <form id="mainForm" name="mainForm" method="get">
-        <div th:insert="fragments/header :: site-header"></div>
+
+        <div th:unless="${isLoggedIn}" th:insert="fragments/header :: site-header"></div>
+        <div th:if="${isLoggedIn}" th:insert="fragments/header :: jb-site-header"></div>
+
+
+
         <input type="hidden" id="msg" name="msg" th:value="${msg}">
         <div class="Title">
           <!-- <img class="fork" src="../imgs/fork.svg" />-->
@@ -33,13 +38,10 @@
           <img class="food5 bigImg" src="/imgs/food5.svg" />
         </div>
       </form>
+
+
+
+      <script th:src="@{/js/login.js}"></script>
   </body>
 </html>
 
-<script>
-    document.getElementById("moveIcon").addEventListener("click", function () {
-        window.location.href = "/MainPage"; // 메인 페이지로 이동
-    });
-</script>
-
-<script src="/js/login.js"></script>

@@ -38,6 +38,11 @@ public class MainController {
         // 뷰 반환
         return "main/MainPage";
     }
+    @GetMapping("/UserMainPage")
+    public String UserMainPage(Model model) {
+        // 뷰 반환
+        return "main/UserMainPage";
+    }
 
 }
 
