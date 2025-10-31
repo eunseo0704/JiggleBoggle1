@@ -1,6 +1,5 @@
 package com.spring.jiggleboggle1.service;
-
-
+import org.springframework.stereotype.Service;
 import com.spring.jiggleboggle1.mapper.UserMapper;
 import com.spring.jiggleboggle1.domain.UserVO;
 import org.slf4j.Logger;
@@ -8,8 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
-
 @Service
 public class UserService {
 
@@ -25,6 +22,9 @@ public class UserService {
 
         try {
             String encodedPassword = passwordEncoder.encode(userVo.getUserPswd());
+
+
+
             userVo.setUserPswd(encodedPassword);
 
             return userMapper.setSignUp(userVo);

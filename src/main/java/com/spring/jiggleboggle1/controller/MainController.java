@@ -11,7 +11,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 
 @Controller
@@ -38,20 +40,26 @@ public class MainController {
     }
 
     @GetMapping("/MainPage")
-    public String mainPage(Model model) {
+    public String mainPage(HttpServletRequest request, Model model) {
+
+        String jwt = Arrays.stream(Optional.ofNullable(request.getCookies()).orElse(new Cookie[0]))
+                .filter(c -> c.getName().equals("JWT_TOKEN"))
+                .findFirst()
+                .map(Cookie::getValue)
+                .orElse(null);
+
+        if (jwt ==null || !jwtUtil.validateToken(jwt)) {
+            return "main/MainPage";
+        }else{
+
+            List<RecipeVO> recipeList = recipeService.getRecipeList();
+            model.addAttribute("recipeList", recipeList);
+
+            return "main/UserMainPage";
+        }
         // 뷰 반환
-        return "main/MainPage";
     }
-    @GetMapping("/UserMainPage")
-    public String UserMainPage(Model model) {
-        // 뷰 반환
-        List<RecipeVO> recipeList = recipeService.getRecipeList();
 
-
-        model.addAttribute("recipeList", recipeList);
-
-        return "main/UserMainPage";
-    }
 
 }
 
