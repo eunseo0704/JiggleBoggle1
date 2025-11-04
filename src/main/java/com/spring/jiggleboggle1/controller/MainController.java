@@ -67,6 +67,12 @@ public class MainController {
 
         return "main/RankPage";
     }
+    @GetMapping("/myPage")
+    public String myPage(Model model) {
+        // 뷰 반환
+        return "user/myPage";
+    }
+
 
 }
 
