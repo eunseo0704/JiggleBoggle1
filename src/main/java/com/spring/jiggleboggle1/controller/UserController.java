@@ -57,7 +57,7 @@ public class UserController {
             jwtCookie.setMaxAge(3600);
             response.addCookie(jwtCookie);
 
-            return "redirect:/MainPage";
+            return "redirect:/UserMainPage";
 
         } else {
             redirectAttributes.addFlashAttribute("msg", "아이디 또는 비밀번호가 올바르지 않습니다.");
@@ -76,7 +76,5 @@ public class UserController {
         redirectAttributes.addFlashAttribute("msg", "로그아웃 되었습니다.");
         return "redirect:/login";
     }
-
-
 
 }
