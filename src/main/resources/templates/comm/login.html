@@ -8,32 +8,20 @@
     <link rel="stylesheet" th:href="@{/css/signup.css}" />
 
 
-    <title>JiggleBoggle</title>
+    <title>JiggleBoggl</title>
 </head>
 <body>
-<form id="mainForm" name="mainForm" method="get">
+<form id="loginForm" name="loginForm" method="post" th:action="@{/userLogin}">
     <div th:insert="fragments/header :: site-header"></div>
 
     <main class="content">
         <!-- 왼쪽 -->
         <section class="left">
             <div class="login-box">
-                <h2>어서오세요!</h2>
-                <form>
-                    <input type="email" placeholder="이메일을 입력하세요" />
-                    <input type="password" placeholder="비밀번호를 입력하세요" />
-                    <button type="submit">로그인</button>
-                </form>
-
-                <div class="divider">또는</div>
-
-                <div class="social-btn">🔍 구글로 계속하기</div>
-                <div class="social-btn">🍎 애플 계정으로 계속하기</div>
-                <div class="social-btn">🟢 네이버로 계속하기</div>
-
-                <div class="bottom-text">
-                    아직 계정이 없으신가요? <a href="#">회원가입하기</a>
-                </div>
+                <h2>로그인(임시)</h2>
+                <input type="text" id="userId" name="userId" placeholder="아이디를 입력하세요">
+                <input type="password"  id="userPswd" name="userPswd"  placeholder="비밀번호를 입력하세요">
+                <button type="submit" class="btn btn-primary">임시 로그인</button>
             </div>
         </section>
 

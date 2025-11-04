@@ -7,4 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface UserMapper {
 
     public int setSignUp(UserVO userVo);
+
+    public UserVO findByUserId(String userId);
 }

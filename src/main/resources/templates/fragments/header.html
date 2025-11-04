@@ -15,6 +15,56 @@
         <a th:href="@{/login}" class="login-btn">로그인</a>
         <a th:href="@{/signup}" class="signup-btn">회원가입</a>
     </div>
+
 </header>
+
+<!-- templates/fragments/jb-header.html -->
+<header th:fragment="jb-site-header" class="jb-topbar">
+    <div class="jb-topbar-inner">
+        <!-- 로고 -->
+        <div class="jb-logo">
+            <img id="moveMainPage" src="/imgs/biz/login_logo.png" class="logo-img" />
+        </div>
+
+        <!-- 검색창 -->
+        <div class="jb-search-bar">
+            <input type="text" placeholder="찾고싶은 레시피 또는 꿀팁 검색하세요" />
+            <img th:src="@{/imgs/biz/search.svg}" class="jb-search-icon" alt="검색" />
+        </div>
+
+        <!-- 로그인 / 마이페이지 -->
+        <div class="jb-user-menu">
+            <div class="jb-mypage-icon">
+                <img th:src="@{/imgs/biz/user-icon.jpeg}"/>
+                <span>MY Page</span>
+            </div>
+            <div class="jb-mypage-icon">
+                <img th:src="@{/imgs/biz/register_icon.jpeg}"/>
+                <span>레시피등록</span>
+            </div>
+            <div class="jb-mypage-icon" id="logoutBtn">
+                <img th:src="@{/imgs/biz/logout_icon.jpeg}"/>
+                <span>Logout</span>
+            </div>
+
+        </div>
+ <!--
+        <div class="login-auth" th:if="${isLoggedIn}">
+            <img th:src="@{/imgs/biz/user-icon.jpeg}" class="user-logo">
+            <a th:href="@{/myPage}" class="mypage-btn" th:text="${userName + '님'}"></a>
+        </div>
+ -->
+    </div>
+
+    <!-- 하단 메뉴 -->
+    <nav class="jb-nav-menu">
+        <a href="#">추천</a>
+        <a href="#">랭킹</a>
+        <a href="#">레시피 추천</a>
+        <a href="#">식단 플래너</a>
+    </nav>
+</header>
+
+
 
 

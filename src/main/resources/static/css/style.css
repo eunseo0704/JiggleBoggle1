@@ -22,6 +22,7 @@ body {
 .menu a {
   text-decoration: none;
   color: black;
+  font-size: 20px;
 }
 .menu {
   display: flex;
@@ -32,9 +33,11 @@ body {
   gap: 25px;
   align-items: center;
 }
+
 .auth a {
   text-decoration: none;
   color: black;
+  font-size: 18px;
 }
 
 .auth .signup-btn {
@@ -42,6 +45,7 @@ body {
   border: 1px solid black;
   border-radius: 4px;
 }
+
 .logo-img {
   width: 45px;
   height: 45px;
@@ -50,4 +54,163 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.user-logo{
+    width: 30px;
+    height: 30px;
+}
+
+.login-auth {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.login-auth a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+/* ===== JiggleBoggle Header Styles ===== */
+.jb-topbar {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    font-family: 'BM kkubulim','Arial', sans-serif;
+    background-color: #fff;
+}
+
+.jb-topbar-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 85px;
+    margin-left: 190px;
+}
+
+.jb-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.jb-logo img {
+    width: 85px;
+    height: 85px;
+    margin-left: 250px;
+    margin-bottom: 7px;
+}
+
+.jb-logo span {
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+
+.jb-search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 18px;
+    width: 560px;
+    height: 45px;
+    padding: 0 20px;
+}
+
+.jb-search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+
+.jb-search-icon {
+    position: absolute;
+    left: 64.5%;
+    top: 29px;
+    /*transform: translateY(-50%);*/
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.jb-search-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.jb-user-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left:200px
+}
+
+
+.jb-mypage-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.jb-mypage-icon img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.jb-mypage-icon span {
+    font-size: 12px;
+    margin-top: 4px;
+    cursor: pointer;
+    width: 68px;
+    text-align: center;
+}
+
+.jb-logout-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.jb-logout-btn img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.jb-logout-btn span {
+    font-size: 12px;
+    margin-top: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.jb-nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 15px 0;
+    border-top: 1px solid #ccc;
+}
+
+.jb-nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.jb-nav-menu a:hover {
+    color: #ff7043;
 }
