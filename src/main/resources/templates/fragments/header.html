@@ -28,8 +28,8 @@
 
         <!-- 검색창 -->
         <div class="jb-search-bar">
-            <input type="text" placeholder="찾고싶은 레시피를 검색하세요" />
-            <img th:src="@{/imgs/biz/search.svg}" class="jb-search-icon" alt="검색" />
+            <input type="text" id="searchName" name="searchName" placeholder="찾고싶은 레시피를 검색하세요" />
+            <img th:src="@{/imgs/biz/search.svg}" class="jb-search-icon" alt="검색" id="searchBtn" />
         </div>
 
         <!-- 로그인 / 마이페이지 -->
@@ -58,8 +58,8 @@
 
     <!-- 하단 메뉴 -->
     <nav class="jb-nav-menu">
-        <a href="/UserMainPage">래시피 조회</a>
-        <a href="#">랭킹</a>
+        <a href="/recipeList">레시피 조회</a>
+        <a href="/rankPage">랭킹</a>
         <a href="#">레시피 추천</a>
         <a href="#">식단 플래너</a>
     </nav>

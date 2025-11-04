@@ -25,5 +25,15 @@ window.addEventListener('DOMContentLoaded',function (){
             window.location.href = "/logout"; // 메인 페이지로 이동
         });
     }
+
+    const searchBtn = document.getElementById("searchBtn");
+    if (searchBtn) {
+        searchBtn.addEventListener("click", function () {
+            window.location.href = "/searchRecipe"; // 메인 페이지로 이동
+        });
+    }
+
+
+
 });
 

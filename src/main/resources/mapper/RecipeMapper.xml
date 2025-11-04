@@ -21,5 +21,24 @@
 
 
 
+    <select id="getSearchList" parameterType="string" resultType="com.spring.jiggleboggle1.domain.RecipeVO">
+
+       SELECT RECIPE_ID
+             ,USER_ID
+             ,CATEGORY_ID
+             ,TITLE
+             ,RCP_DISC
+             ,COOK_TIME
+             ,COOK_DFCT
+             ,RGT_DATE
+             ,UPD_DATE
+             ,IMG_URL
+         FROM RECIPE_MASTER rm
+        WHERE TITLE LIKE CONCAT('%',#{title},'%')
+
+    </select>
+
+
+
 
 </mapper>

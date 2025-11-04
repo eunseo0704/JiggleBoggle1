@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Pen+Script&display=swap");
+
+:root {
+  --bg: #f8f6f1;
+  --ink: #1f1b16;
+  --accent: #ffc94d;
+  --line: #c8c3b6;
+  --shadow: rgba(31, 27, 22, 0.08);
+  --radius-lg: 28px;
+  --radius-md: 22px;
+  --radius-sm: 16px;
+  --radius-pill: 999px;
+  font-family: "Nanum Pen Script", "Jua", "SUIT", "Noto Sans KR", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 40px 64px;
+}
+
+.top-bar {
+  display: grid;
+  grid-template-columns: minmax(200px, 280px) 1fr auto;
+  align-items: center;
+  gap: 28px;
+  padding: 18px 24px;
+  border-radius: var(--radius-lg);
+  background: #fff;
+  border: 2px solid var(--ink);
+  box-shadow: 6px 8px 0 rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.logo-icon {
+  font-size: 32px;
+}
+
+.logo-name {
+  letter-spacing: 0.03em;
+}
+
+.search-bar {
+  display: flex;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background: #fff;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  background: transparent;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar button {
+  width: 56px;
+  border-left: 2px solid var(--ink);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  background: var(--accent);
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-outline {
+  padding: 10px 22px;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-pill);
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+
+.btn-outline:hover {
+  transform: translateY(-2px);
+}
+
+.btn-round {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.btn-round:hover {
+  transform: translateY(-2px);
+}
+
+.btn-round .badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--ink);
+  font-size: 16px;
+}
+
+.main-tabs {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  padding: 22px 0 36px;
+  font-size: 18px;
+}
+
+.main-tabs .tab {
+  position: relative;
+  padding-bottom: 6px;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.main-tabs .tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  transition: background 0.2s ease;
+}
+
+.main-tabs .tab:hover,
+.main-tabs .tab:focus {
+  opacity: 1;
+}
+
+.main-tabs .tab.active {
+  opacity: 1;
+  font-weight: 700;
+}
+
+.main-tabs .tab.active::after {
+  background: var(--ink);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px 18px;
+}
+
+section h2 {
+  margin: 20px 0 0 20px;
+  font-size: 24px;
+}
+
+.carousel-container {
+  position: relative;
+  width:95%;
+  margin-left:40px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--ink);
+  padding: 32px 48px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 6px 8px 0 rgba(0, 0, 0, 0.06);
+}
+
+.carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 220px;
+  gap: 20px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.recipe-card {
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 4px 6px 0 var(--shadow);
+  min-height: 200px;
+  justify-content: center;
+  text-align: center;
+}
+
+.recipe-card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.link-arrow {
+  font-size: 18px;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.carousel-control {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  background: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  transition: background 0.2s ease;
+}
+
+.carousel-control:hover {
+  background: var(--accent);
+}
+
+.carousel-control:disabled,
+.carousel-control.is-disabled {
+  opacity: 0.3;
+  background: #f0ede7;
+  cursor: not-allowed;
+}
+
+.chef-intro {
+  margin-top: 48px;
+  padding: 32px 56px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--ink);
+  box-shadow: 6px 8px 0 rgba(0, 0, 0, 0.05);
+}
+
+.chef-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 24px;
+}
+
+.chef-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.chef-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  background: #fff;
+}
+
+.btn-outline.small {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn-pill {
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--ink);
+  background: #fff;
+}
+
+.recent-recipes {
+  margin-top: 48px;
+  padding: 32px 40px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--ink);
+  box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.04);
+}
+
+.recent-recipes h2 {
+  margin-bottom: 16px;
+}
+
+.empty-state {
+  margin: 0;
+  color: #7b766a;
+}
+
+@media (max-width: 1024px) {
+  .page {
+    padding: 24px 24px 48px;
+  }
+
+  .top-bar {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 16px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .top-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .carousel-container {
+    padding: 24px 28px;
+  }
+
+  .carousel-track {
+    grid-auto-columns: 200px;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 18px 16px 32px;
+  }
+
+  .main-tabs {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .carousel-container {
+    flex-direction: column;
+  }
+
+  .carousel-control {
+    order: -1;
+  }
+
+  .carousel-track {
+    width: 100%;
+  }
+
+  .chef-intro {
+    padding: 24px;
+  }
+}

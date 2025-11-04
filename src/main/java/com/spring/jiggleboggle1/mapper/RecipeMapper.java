@@ -8,6 +8,7 @@ import java.util.List;
 @Mapper
 public interface RecipeMapper {
     public List<RecipeVO> getRecipeList();
+    public List<RecipeVO> getSearchList(String searchName);
     
     
 }

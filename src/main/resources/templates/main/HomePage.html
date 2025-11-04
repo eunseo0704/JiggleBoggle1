@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+  <link rel="stylesheet" th:href="@{/css/HomePage.css}" />
+</head>
+  <body>
+  <form id="mainForm" name="mainForm"  method="post">
+
+    <div th:unless="${isLoggedIn}" th:insert="fragments/header :: site-header"></div>
+    <div th:if="${isLoggedIn}" th:insert="fragments/header :: jb-site-header"></div>
+
+      <main>
+        <section class="best-recipes" aria-labelledby="best-recipes-title">
+          <div class="section-header">
+            <h2 id="best-recipes-title">
+              핵꿀팁 지글뽀글 BEST 요리모음
+            </h2>
+          </div>
+          <div class="carousel-container">
+            <button
+              type="button"
+              class="carousel-control prev"
+              aria-label="이전 레시피"
+            >
+              ‹
+            </button>
+            <div class="carousel-track">
+              <article class="recipe-card">
+                <h3>나만의 레시피 등록하러 가기</h3>
+                <span class="link-arrow">→</span>
+              </article>
+              <article class="recipe-card">
+                <h3>달콤바삭 돈까스 덮밥 레시피</h3>
+              </article>
+              <article class="recipe-card">
+                <h3>부들꼬소 오꼬노미야끼 오믈렛 레시피</h3>
+              </article>
+              <article class="recipe-card">
+                <h3>후루룩짭짭 맛좋은 라면 레시피</h3>
+              </article>
+              <article class="recipe-card">
+                <h3>추억의 엄마의 손맛 버팔로윙 레시피</h3>
+              </article>
+              <article class="recipe-card">
+                <h3>딸기타르트 레시피</h3>
+              </article>
+              <article class="recipe-card">
+                <h3>이거 어디까지 늘어나는거에요? 치즈돈가스 레시피</h3>
+              </article>
+            </div>
+            <button
+              type="button"
+              class="carousel-control next"
+              aria-label="다음 레시피"
+            >
+              ›
+            </button>
+          </div>
+        </section>
+
+      </main>
+    </form>
+
+    <script th:src="@{/js/HomePage.js}"></script>
+  </body>
+</html>

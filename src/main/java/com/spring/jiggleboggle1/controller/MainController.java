@@ -8,7 +8,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Arrays;
@@ -22,7 +21,6 @@ public class MainController {
 
     private final JwtUtil jwtUtil;
     private final RecipeService recipeService;
-
 
 
     @GetMapping("/signup")
@@ -48,18 +46,27 @@ public class MainController {
                 .map(Cookie::getValue)
                 .orElse(null);
 
-        if (jwt ==null || !jwtUtil.validateToken(jwt)) {
+        if (jwt == null || !jwtUtil.validateToken(jwt)) {
             return "main/MainPage";
-        }else{
+        } else {
 
             List<RecipeVO> recipeList = recipeService.getRecipeList();
             model.addAttribute("recipeList", recipeList);
 
-            return "main/UserMainPage";
+            return "main/HomePage";
         }
         // 뷰 반환
+
     }
 
+    @GetMapping("/rankPage")
+    public String rankPage(Model model) {
+
+        List<RecipeVO> recipeList = recipeService.getRecipeList();
+        model.addAttribute("recipeList", recipeList);
+
+        return "main/RankPage";
+    }
 
 }
 

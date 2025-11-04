@@ -17,4 +17,8 @@ public class RecipeService {
     public List<RecipeVO> getRecipeList() {
         return recipeMapper.getRecipeList();
     }
+
+    public List<RecipeVO> getSearchList(String searchName)  {
+        return recipeMapper.getSearchList(searchName);
+    }
 }

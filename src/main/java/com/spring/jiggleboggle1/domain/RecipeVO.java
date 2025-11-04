@@ -20,5 +20,4 @@ public class RecipeVO {
     private String status;
 
 
-
 }
