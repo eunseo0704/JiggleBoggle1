@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" th:href="@{/css/mainCss.css}" />
+    <link rel="stylesheet" th:href="@{/css/signup.css}" />
+
+
+    <title>JiggleBoggle</title>
+</head>
+<body>
+<form id="mainForm" name="mainForm" method="get">
+    <div th:insert="fragments/header :: site-header"></div>
+
+    <main class="content">
+        <!-- 왼쪽 -->
+        <section class="left">
+            <div class="login-box">
+                <h2>Welcome!</h2>
+                <input type="text" placeholder="이름을 입력하세요">
+                <input type="email" placeholder="이메일을 입력하세요">
+                <input type="password" placeholder="비밀번호를 입력하세요">
+                <input type="password" placeholder="비밀번호 확인">
+                <button class="btn btn-primary">회원가입</button>
+            </div>
+        </section>
+
+        <!-- 오른쪽 -->
+        <section class="right">
+            <div class="logo-section">
+                <img src="/imgs/big_icon.png" class="logo-icon" alt="logo"/>
+            </div>
+
+            <div class="food-grid">
+                <img src="/imgs/food1.svg" alt="food1">
+                <img src="/imgs/food2.svg" alt="food2">
+                <img src="/imgs/food3.svg" alt="food3">
+                <img src="/imgs/food4.svg" alt="food4">
+                <img src="/imgs/food4.svg" alt="food4">
+                <img src="/imgs/food4.svg" alt="food4">
+            </div>
+        </section>
+    </main>
+
+</form>
+</body>
+</html>
+
+<script>
+    document.getElementById("moveIcon").addEventListener("click", function () {
+        window.location.href = "/MainPage"; // 메인 페이지로 이동
+    });
+</script>
