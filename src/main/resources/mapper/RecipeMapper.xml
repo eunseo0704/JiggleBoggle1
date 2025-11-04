@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.jiggleboggle1.mapper.RecipeMapper">
+
+
+    <select id="getRecipeList" parameterType="string" resultType="com.spring.jiggleboggle1.domain.RecipeVO">
+
+       SELECT RECIPE_ID
+             ,USER_ID
+             ,CATEGORY_ID
+             ,TITLE
+             ,RCP_DISC
+             ,COOK_TIME
+             ,COOK_DFCT
+             ,RGT_DATE
+             ,UPD_DATE
+             ,IMG_URL
+         FROM RECIPE_MASTER rm
+
+    </select>
+
+</mapper>

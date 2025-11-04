@@ -32,6 +32,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                                 .requestMatchers(
                                         "/MainPage",   // ✅ 메인페이지
+                                        "/UserMainPage",
                                         "/",           // 루트
                                         "/signup",
                                         "/login",
