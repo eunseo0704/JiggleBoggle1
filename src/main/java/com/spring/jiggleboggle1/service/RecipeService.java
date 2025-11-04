@@ -13,6 +13,7 @@ public class RecipeService {
 
     private final RecipeMapper recipeMapper;
 
+
     public List<RecipeVO> getRecipeList() {
         return recipeMapper.getRecipeList();
     }
