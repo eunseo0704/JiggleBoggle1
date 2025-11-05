@@ -18,6 +18,6 @@ public class RecipeVO {
     private String updDate;
     private String imgUrl;
     private String status;
-
+    private String searchName;
 
 }

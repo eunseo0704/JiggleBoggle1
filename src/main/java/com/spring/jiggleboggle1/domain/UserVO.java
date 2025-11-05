@@ -16,4 +16,6 @@ public class UserVO {
     private String userTel;
     private String joinDate;
 
+    private String loginType; // "NORMAL" or "GOOGLE"
+
 }

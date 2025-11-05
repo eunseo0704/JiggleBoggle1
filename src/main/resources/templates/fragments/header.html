@@ -2,7 +2,7 @@
 <!-- fragments/header.html -->
 <header th:fragment="site-header" class="navbar">
     <div class="logo-container">
-        <img src="/imgs/JiggleBoggle.svg" class="logo-img" alt="logo"/>
+        <img src="/imgs/JiggleBoggle.svg" class="logo-img" alt="logo" id="logoImg"/>
         <span id="moveIcon">JiggleBoggle</span>
     </div>
     <nav class="menu">
@@ -29,13 +29,12 @@
         <!-- 검색창 -->
         <div class="jb-search-bar">
             <input type="text" id="searchName" name="searchName" placeholder="찾고싶은 레시피를 검색하세요" />
-            <img th:src="@{/imgs/biz/search.svg}" class="jb-search-icon" alt="검색" id="searchBtn" />
+            <img th:src="@{/imgs/biz/search.svg}" class="jb-search-icon" alt="검색" onclick="this.closest('mainFrom').submit()"/>
         </div>
-
         <!-- 로그인 / 마이페이지 -->
         <div class="jb-user-menu">
             <div class="jb-mypage-icon">
-                <img th:src="@{/imgs/biz/user-icon.jpeg}"/>
+                <img th:src="@{/imgs/biz/user-icon.jpeg}" id="circle-user"/>
                 <span>MY Page</span>
             </div>
             <div class="jb-mypage-icon">
@@ -58,13 +57,10 @@
 
     <!-- 하단 메뉴 -->
     <nav class="jb-nav-menu">
+        <a href="/MainPage">홈</a>
         <a href="/recipeList">레시피 조회</a>
         <a href="/rankPage">랭킹</a>
         <a href="#">레시피 추천</a>
         <a href="/myPage">임시 Mypage</a>
     </nav>
 </header>
-
-
-
-

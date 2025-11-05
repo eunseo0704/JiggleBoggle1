@@ -52,6 +52,7 @@
 .join-text {
     margin-top: 15px; /*버튼과 텍스트 사이 간격*/
     font-size: 1.1rem;
+    cursor:pointer;
 }
 
 .food-imgs {

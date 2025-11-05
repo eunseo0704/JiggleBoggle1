@@ -8,5 +8,11 @@ public interface UserMapper {
 
     public int setSignUp(UserVO userVo);
 
-    UserVO findByUserId(String userId);
+    public UserVO findByUserId(String userId);
+
+    public UserVO findByEmail(String userMail);
+
+    public void insertUser(UserVO user);
+
+
 }

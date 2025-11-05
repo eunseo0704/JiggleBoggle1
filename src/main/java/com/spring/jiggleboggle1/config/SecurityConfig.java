@@ -1,8 +1,9 @@
 package com.spring.jiggleboggle1.config;
 
 
+import com.spring.jiggleboggle1.security.CustomOAuth2UserService;
+import com.spring.jiggleboggle1.security.JwtUtil;
 import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,9 +20,12 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 
 @Configuration
-//@EnableWebSecurity
+@EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
+
+    private final CustomOAuth2UserService customOAuth2UserService;
+    private final JwtUtil jwtUtil;
 
     //HTTP 보안(인증·인가·CSRF·로그아웃·필터 등)을 모두 설정
     @Bean
@@ -30,36 +34,41 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()) //WT토큰을 사용하는 REST API 방식이기에 disable 처리
                 //요청권한 설정
                 .authorizeHttpRequests(auth -> auth
-                                .requestMatchers(
-                                        "/MainPage",   // ✅ 메인페이지
-                                        "/UserMainPage",
-                                        "/",           // 루트
-                                        "/signup",
-                                        "/login",
-                                        "/logout",
-                                        "/css/**",
-                                        "/js/**",
-                                        "/images/**"
-                                ).permitAll()
+//                                .requestMatchers(
+//                                        "/MainPage",   // ✅ 메인페이지
+//                                        "/UserMainPage",
+//                                        "/",           // 루트
+//                                        "/signup",
+//                                        "/login",
+//                                        "/logout",
+//                                        "/css/**",
+//                                        "/js/**",
+//                                        "/images/**"
+//                                ).permitAll()
                                 .anyRequest().permitAll() // 개발 중엔 전체 허용
+
                         //.anyRequest().authenticated() // 나머지는 인증이되어야 접근가능
 
                 )
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
-                .logout(logout -> logout
-                        .logoutUrl("/logout")
-                        .logoutSuccessHandler((request, response, authentication) -> {
-                            // JWT 쿠키 삭제
-                            Cookie jwtCookie = new Cookie("JWT_TOKEN", null);
-                            jwtCookie.setHttpOnly(true);
-                            jwtCookie.setPath("/");
-                            jwtCookie.setMaxAge(0);
-                            response.addCookie(jwtCookie);
-
-                            // 메인 페이지로 리다이렉트
-                            response.sendRedirect("/MainPage");
-                        })
+                .oauth2Login(oauth -> oauth
+                        .loginPage("/login")
+                        .userInfoEndpoint(userInfo -> userInfo.userService(customOAuth2UserService))
                 )
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                    .logout(logout -> logout
+                            .logoutUrl("/logout")
+                            .logoutSuccessHandler((request, response, authentication) -> {
+                                // JWT 쿠키 삭제
+                                Cookie jwtCookie = new Cookie("JWT_TOKEN", null);
+                                jwtCookie.setHttpOnly(true);
+                                jwtCookie.setPath("/");
+                                jwtCookie.setMaxAge(0);
+                                response.addCookie(jwtCookie);
+
+                                // 메인 페이지로 리다이렉트
+                                response.sendRedirect("/MainPage");
+                            })
+                    )
                 .formLogin(FormLoginConfigurer::disable)
                 .httpBasic(HttpBasicConfigurer::disable);
         //.httpBasic(basic -> basic.disable());

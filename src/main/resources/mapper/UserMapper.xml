@@ -29,4 +29,31 @@
         WHERE USER_ID = #{userId}
     </select>
 
+    <select id="findByEmail" parameterType="string" resultType="com.spring.jiggleboggle1.domain.UserVO">
+        SELECT *
+        FROM users
+        WHERE email = #{email}
+    </select>
+
+    <insert id="insertUser" parameterType="com.spring.jiggleboggle1.domain.UserVO" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO USER_MASTER (
+            USER_ID,
+            USER_NAME,
+            USER_PSWD,
+            USER_MAIL,
+            JOIN_DATE,
+            USER_ROLE,
+            USER_STATUS,
+            LOGIN_TYPE
+        ) VALUES (#{userId},
+                  #{userName},
+                  #{userPswd},
+                  #{userMail},
+                  NOW(),
+                  'U',
+                  'Y',
+                  #{loginType}
+                 )
+    </insert>
+
 </mapper>

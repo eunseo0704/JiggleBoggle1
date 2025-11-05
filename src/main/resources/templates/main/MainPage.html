@@ -15,8 +15,7 @@
         <div th:if="${isLoggedIn}" th:insert="fragments/header :: jb-site-header"></div>
 
 
-
-
+        <h3>Main</h3>
 
         <input type="hidden" id="msg" name="msg" th:value="${msg}">
         <div class="Title">
@@ -30,7 +29,7 @@
         </p>
         <div class="signup-container">
           <button class="signup">Sign it now</button>
-          <p class="join-text">let's join us!</p>
+          <p class="join-text" id="signUpBtn">let's join us!</p>
         </div>
         <div class="food-imgs">
           <img class="food1 bigImg" src="/imgs/food1.svg" />
@@ -43,7 +42,7 @@
 
 
 
-      <script th:src="@{/js/login.js}"></script>
+      <script th:src="@{/js/common.js}"></script>
   </body>
 </html>
 

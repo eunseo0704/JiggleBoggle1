@@ -15,21 +15,18 @@ header {
     display: flex;
     justify-content: center;
     padding: 20px;
-
     border: 2px solid #ddd;
     border-radius: 25px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     background-color: #fff;
     margin: 20px auto; /* 상하 여백 */
-    width: 97%; /* 화면에 꽉 차지 않게 */
-    max-width: 1300px;
-
+    width: 94%; /* 화면에 꽉 차지 않게 */
 }
 
 /* ✅ 기본: 한 줄에 4개 (최대 1200px 기준) */
 .recipe-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 24px;
     width: 90%;
     max-width: 1200px;
@@ -79,13 +76,13 @@ header {
 /* ✅ 반응형 설정 */
 @media (max-width: 1200px) {
     .recipe-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 
 @media (max-width: 900px) {
     .recipe-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

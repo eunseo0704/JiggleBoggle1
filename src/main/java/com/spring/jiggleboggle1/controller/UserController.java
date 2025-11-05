@@ -1,10 +1,13 @@
 package com.spring.jiggleboggle1.controller;
 
-import com.spring.jiggleboggle1.config.JwtUtil;
+import com.spring.jiggleboggle1.domain.RecipeVO;
+import com.spring.jiggleboggle1.security.JwtUtil;
+import com.spring.jiggleboggle1.service.RecipeService;
 import com.spring.jiggleboggle1.service.UserService;
 import com.spring.jiggleboggle1.domain.UserVO;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,13 +17,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.List;
+
 @Controller
+@RequiredArgsConstructor
 public class UserController {
 
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private JwtUtil jwtUtil;
+    private final UserService userService;
+    private final JwtUtil jwtUtil;
+    private final RecipeService recipeService;
 
     @PostMapping("/signUpUserData")
     public String signUpUserData(@ModelAttribute UserVO userVO, Model model, RedirectAttributes redirectAttributes) {
@@ -37,7 +42,7 @@ public class UserController {
         }
     }
 
-    @PostMapping("/userLogin")
+    @GetMapping("/userLogin")
     public String loginUser(@RequestParam String userId,
                             @RequestParam String userPswd,
                             HttpServletResponse response,
@@ -57,7 +62,7 @@ public class UserController {
             jwtCookie.setMaxAge(3600);
             response.addCookie(jwtCookie);
 
-            return "redirect:/UserMainPage";
+            return "redirect:/MainPage";
 
         } else {
             redirectAttributes.addFlashAttribute("msg", "아이디 또는 비밀번호가 올바르지 않습니다.");
@@ -76,5 +81,14 @@ public class UserController {
         redirectAttributes.addFlashAttribute("msg", "로그아웃 되었습니다.");
         return "redirect:/login";
     }
+    @GetMapping("/rankPage")
+    public String rankPage(Model model) {
+
+        List<RecipeVO> recipeList = recipeService.getRecipeList();
+        model.addAttribute("recipeList", recipeList);
+
+        return "main/RankPage";
+    }
+
 
 }

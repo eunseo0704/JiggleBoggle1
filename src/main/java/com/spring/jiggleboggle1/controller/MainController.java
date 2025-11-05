@@ -1,11 +1,12 @@
 package com.spring.jiggleboggle1.controller;
 
-import com.spring.jiggleboggle1.config.JwtUtil;
+import com.spring.jiggleboggle1.security.JwtUtil;
 import com.spring.jiggleboggle1.domain.RecipeVO;
 import com.spring.jiggleboggle1.service.RecipeService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,7 @@ public class MainController {
     private final RecipeService recipeService;
 
 
+
     @GetMapping("/signup")
     public String signup() {
 
@@ -37,8 +39,9 @@ public class MainController {
         return "comm/login";
     }
 
+
     @GetMapping("/MainPage")
-    public String mainPage(HttpServletRequest request, Model model) {
+    public String mainPage(HttpServletRequest request, Model model, OAuth2AuthenticationToken auth, RecipeVO recipeVo) {
 
         String jwt = Arrays.stream(Optional.ofNullable(request.getCookies()).orElse(new Cookie[0]))
                 .filter(c -> c.getName().equals("JWT_TOKEN"))
@@ -46,27 +49,19 @@ public class MainController {
                 .map(Cookie::getValue)
                 .orElse(null);
 
-        if (jwt == null || !jwtUtil.validateToken(jwt)) {
+        if (jwt ==null || !jwtUtil.validateToken(jwt)) {
             return "main/MainPage";
-        } else {
+        }else{
 
             List<RecipeVO> recipeList = recipeService.getRecipeList();
             model.addAttribute("recipeList", recipeList);
+            model.addAttribute("recipeVo", recipeVo);
 
             return "main/HomePage";
         }
         // 뷰 반환
-
     }
 
-    @GetMapping("/rankPage")
-    public String rankPage(Model model) {
-
-        List<RecipeVO> recipeList = recipeService.getRecipeList();
-        model.addAttribute("recipeList", recipeList);
-
-        return "main/RankPage";
-    }
     @GetMapping("/myPage")
     public String myPage(Model model) {
         // 뷰 반환

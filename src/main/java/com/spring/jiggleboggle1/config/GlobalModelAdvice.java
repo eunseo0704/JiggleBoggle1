@@ -3,11 +3,10 @@ package com.spring.jiggleboggle1.config;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.ui.Model;
-import com.spring.jiggleboggle1.config.JwtUtil;
+import com.spring.jiggleboggle1.security.JwtUtil;
 
 @ControllerAdvice   // 모든 컨트롤러에 공통 적용
 public class GlobalModelAdvice {

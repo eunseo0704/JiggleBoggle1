@@ -9,7 +9,7 @@
     <title>JiggleBoggle</title>
   </head>
   <body>
-      <form id="mainForm" name="mainForm" method="get">
+      <form id="mainForm" name="mainForm" method="get" th:action="@{/searchRecipe}">
 
         <div th:unless="${isLoggedIn}" th:insert="fragments/header :: site-header"></div>
         <div th:if="${isLoggedIn}" th:insert="fragments/header :: jb-site-header"></div>
@@ -31,7 +31,7 @@
       </form>
 
 
-      <script th:src="@{/js/login.js}"></script>
+      <script th:src="@{/js/common.js}"></script>
   </body>
 </html>
 
