@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'BM kkubulim','Arial', sans-serif;
+    font-family: 'BM kkubulim', sans-serif;
     background-color: #fffdfa;
     height: 100vh;
     overflow: hidden;
@@ -39,6 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
 }
 
 .login-box h2 {
@@ -55,6 +56,7 @@ body {
 }
 
 .login-box button {
+    font-family: 'BM kkubulim', sans-serif;
     background: #000;
     color: white;
     padding: 12px;
@@ -62,6 +64,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: 0.2s;
+    width: 380px;
 }
 
 .login-box button:hover {

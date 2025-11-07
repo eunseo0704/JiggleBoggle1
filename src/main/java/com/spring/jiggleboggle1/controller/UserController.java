@@ -1,14 +1,13 @@
 package com.spring.jiggleboggle1.controller;
 
-import com.spring.jiggleboggle1.domain.RecipeVO;
 import com.spring.jiggleboggle1.security.JwtUtil;
+import com.spring.jiggleboggle1.domain.RecipeVO;
 import com.spring.jiggleboggle1.service.RecipeService;
 import com.spring.jiggleboggle1.service.UserService;
 import com.spring.jiggleboggle1.domain.UserVO;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,7 +41,7 @@ public class UserController {
         }
     }
 
-    @GetMapping("/userLogin")
+    @PostMapping("/userLogin")
     public String loginUser(@RequestParam String userId,
                             @RequestParam String userPswd,
                             HttpServletResponse response,

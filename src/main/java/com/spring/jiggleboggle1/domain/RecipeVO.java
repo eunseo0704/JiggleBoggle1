@@ -19,5 +19,13 @@ public class RecipeVO {
     private String imgUrl;
     private String status;
     private String searchName;
+    private String tagName;
+
+    private String[] ingrNames;
+    private String ingrName;
+    private String[] ingrAmounts;
+    private String ingrAmount;
+    private String[] ingrUnits;
+    private String ingrUnit;
 
 }

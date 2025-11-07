@@ -12,7 +12,7 @@ public interface UserMapper {
 
     public UserVO findByEmail(String userMail);
 
-    public void insertUser(UserVO user);
+    public void insertGoogleUser(UserVO user);
 
 
 }

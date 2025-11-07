@@ -153,6 +153,11 @@ body {
 }
 
 
+.jb-user-menu  a{
+    text-decoration: none;
+}
+
+
 .jb-mypage-icon {
     display: flex;
     flex-direction: column;

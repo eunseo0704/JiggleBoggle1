@@ -8,7 +8,7 @@
     <link rel="stylesheet" th:href="@{/css/signup.css}" />
 
 
-    <title>JiggleBoggl</title>
+    <title>JiggleBoggle</title>
 </head>
 <body>
 <form id="loginForm" name="loginForm" method="post" th:action="@{/userLogin}">
@@ -22,6 +22,19 @@
                 <input type="text" id="userId" name="userId" placeholder="아이디를 입력하세요">
                 <input type="password"  id="userPswd" name="userPswd"  placeholder="비밀번호를 입력하세요">
                 <button type="submit" class="btn btn-primary">임시 로그인</button>
+
+                <a href="/oauth2/authorization/google">
+                    <button class="login-btn">
+                        <svg width="18" height="18" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 8px;">
+                            <path fill="#EA4335" d="M24 9.5c3.9 0 6.7 1.7 8.3 3.1l6-5.8C35.9 3.7 30.4 1.5 24 1.5 14.7 1.5 6.9 6.7 3.1 14.4l7.4 5.7C12.5 15.2 17.7 9.5 24 9.5z"/>
+                            <path fill="#4285F4" d="M46.5 24.5c0-1.7-.1-3.3-.4-4.9H24v9.4h12.6c-.5 2.9-2.1 5.3-4.6 6.9l7.1 5.5c4.2-3.9 6.4-9.6 6.4-16.9z"/>
+                            <path fill="#FBBC05" d="M10.5 28.9c-.9-2.6-1.4-5.4-1.4-8.4s.5-5.8 1.4-8.4L3.1 6.4C1.1 9.8 0 13.8 0 18.1s1.1 8.3 3.1 11.7l7.4-0.9z"/>
+                            <path fill="#34A853" d="M24 46.5c6.4 0 11.9-2.1 15.8-5.8l-7.1-5.5c-2 1.3-4.6 2.1-8.7 2.1-6.3 0-11.5-5.7-12.5-13.1L3.1 33.6C6.9 41.3 14.7 46.5 24 46.5z"/>
+                        </svg>
+                        Google로 로그인
+                    </button>
+                </a>
+
             </div>
         </section>
 

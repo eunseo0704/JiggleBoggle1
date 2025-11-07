@@ -35,22 +35,19 @@
         WHERE email = #{email}
     </select>
 
-    <insert id="insertUser" parameterType="com.spring.jiggleboggle1.domain.UserVO" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertGoogleUser" parameterType="com.spring.jiggleboggle1.domain.UserVO" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO USER_MASTER (
-            USER_ID,
             USER_NAME,
-            USER_PSWD,
             USER_MAIL,
             JOIN_DATE,
             USER_ROLE,
             USER_STATUS,
             LOGIN_TYPE
-        ) VALUES (#{userId},
+        ) VALUES (
                   #{userName},
-                  #{userPswd},
                   #{userMail},
                   NOW(),
-                  'U',
+                  'USER',
                   'Y',
                   #{loginType}
                  )

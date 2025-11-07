@@ -34,17 +34,17 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()) //WT토큰을 사용하는 REST API 방식이기에 disable 처리
                 //요청권한 설정
                 .authorizeHttpRequests(auth -> auth
-//                                .requestMatchers(
-//                                        "/MainPage",   // ✅ 메인페이지
-//                                        "/UserMainPage",
-//                                        "/",           // 루트
-//                                        "/signup",
-//                                        "/login",
-//                                        "/logout",
-//                                        "/css/**",
-//                                        "/js/**",
-//                                        "/images/**"
-//                                ).permitAll()
+                                .requestMatchers(
+                                        "/MainPage",   // ✅ 메인페이지
+                                        "/UserMainPage",
+                                        "/",           // 루트
+                                        "/signup",
+                                        "/login",
+                                        "/logout",
+                                        "/css/**",
+                                        "/js/**",
+                                        "/images/**"
+                                ).permitAll()
                                 .anyRequest().permitAll() // 개발 중엔 전체 허용
 
                         //.anyRequest().authenticated() // 나머지는 인증이되어야 접근가능
@@ -52,6 +52,7 @@ public class SecurityConfig {
                 )
                 .oauth2Login(oauth -> oauth
                         .loginPage("/login")
+                        .defaultSuccessUrl("/MainPage", true)
                         .userInfoEndpoint(userInfo -> userInfo.userService(customOAuth2UserService))
                 )
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)

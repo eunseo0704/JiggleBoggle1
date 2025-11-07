@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" th:href="@{/css/RecipeWrite.css}" />
+
+    <title>JiggleBoggle</title>
+</head>
+<body>
+<form id="mainForm" name="mainForm" method="get">
+
+    <div th:unless="${isLoggedIn}" th:insert="fragments/header :: site-header"></div>
+    <div th:if="${isLoggedIn}" th:insert="fragments/header :: jb-site-header"></div>
+    <h2>레시피 작성 📝</h2>
+    <div class="recipe-container">
+
+
+        <!-- 완성 사진 여러 장 -->
+        <label>완성 사진 📸</label>
+        <input type="file" id="mainImageInput" name="mainImages" accept="image/*" multiple onchange="previewMultipleImages(event)">
+        <div id="mainPreviewArea" class="multi-preview-area">
+            <span>미리보기</span>
+        </div>
+
+
+        <label for="title">레시피 제목</label>
+        <input type="text" id= "title"  name="title" placeholder="예) 소고기 미역국 끓이기" class="input_style wd100">
+
+        <label>레시피 소개 🍽️</label>
+        <textarea id="rcpDisc" name="rcpDisc" placeholder="예) 어머니의 미역국 레시피를..." rows="6"></textarea>
+
+        <!-- 🧾 카테고리 / 난이도 / 요리시간 -->
+        <div class="form-section">
+            <div class="info-row">
+                <!-- 카테고리 -->
+                <div class="info-item">
+                    <label for="categoryId">카테고리</label>
+                    <select id="categoryId" name="categoryId" required>
+                        <option value="">선택</option>
+                        <option th:each="cat : ${categoryList}" th:value="${cat.code}" th:text="${cat.codeName}"></option>
+                    </select>
+                </div>
+
+                <!-- 난이도 -->
+                <div class="info-item">
+                    <label for="difficulty">난이도</label>
+                    <select id="difficulty" name="difficulty" required>
+                        <option value="">선택</option>
+                        <option value="쉬움">쉬움</option>
+                        <option value="보통">보통</option>
+                        <option value="어려움">어려움</option>
+                    </select>
+                </div>
+
+                <!-- 요리시간 -->
+                <div class="info-item">
+                    <label for="cookTime">요리 시간</label>
+                    <select id="cookTime" name="cookTime" required>
+                        <option value="">선택</option>
+                        <option value="10분 이내">10분 이내</option>
+                        <option value="30분 이내">30분 이내</option>
+                        <option value="1시간 이내">1시간 이내</option>
+                        <option value="1시간 이상">1시간 이상</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <label>태그 #️⃣</label>
+        <input type="text" id="tagName" name="tagName" placeholder="예) 국물요리, 소고기, 집밥" class="input_style wd100">
+
+        <label>재료 정보  <button type="button" class="add-btn" onclick="addIngredientRow()">＋ 재료 추가</button> </label>
+        <table id="ingredientTable" class="ingredient-table">
+            <thead>
+            <tr>
+                <th>재료명</th>
+                <th>수량</th>
+                <th>단위</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="text" name="ingrNames" placeholder="예) 소고기"      class="input_style wd90"></td>
+                <td><input type="text" name="ingrAmounts" placeholder="예) 200"    class="input_style wd90"></td>
+                <td><input type="text" name="ingrUnits" placeholder="예) g"        class="input_style wd90"></td>
+                <td><button type="button" class="remove-btn" onclick="removeRow(this)">삭제</button></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!-- 요리 단계 -->
+        <label>요리 순서 <button type="button" class="add-btn" onclick="addStepRow()">＋ 단계 추가</button></label>
+        <div id="stepContainer" class="step-container">
+            <div class="step-row">
+                <button type="button" class="remove-btn" onclick="removeRow(this)">삭제</button>
+                <div class="step-image-area">
+                    <input type="file" name="stepImages" accept="image/*" onchange="previewStepImage(this)">
+                    <img class="step-preview" alt="미리보기" />
+                </div>
+                <textarea name="stepDescriptions" placeholder="예) 양파를 채 썰어 팬에 볶는다." rows="6"></textarea>
+            </div>
+        </div>
+
+
+
+        <label>요리 팁 & 주의사항 💡</label>
+        <textarea name="tips" placeholder="예) 고기를 넣을 땐 설탕 먼저 넣기!"   rows="6"></textarea>
+
+        <div class="btn-area">
+            <button type="submit">작성하기</button>
+        </div>
+    </div>
+</form>
+
+    <script>
+        // ✅ 재료 추가/삭제
+        function addIngredientRow() {
+            const tbody = document.querySelector("#ingredientTable tbody");
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td><input type="text" name="ingredientNames" placeholder="예) 양파"       class="input_style wd90"></td>
+                <td><input type="text" name="ingredientAmounts" placeholder="예) 1/2"     class="input_style wd90"></td>
+                <td><input type="text" name="ingredientUnits" placeholder="예) 개"         class="input_style wd90"></td>
+                <td><button type="button" class="remove-btn" onclick="removeRow(this)">삭제</button></td>
+            `;
+            tbody.appendChild(row);
+        }
+
+
+         // 요리 순서 행 추가/삭제
+        function addStepRow() {
+            const container = document.getElementById("stepContainer");
+            const row = document.createElement("div");
+            row.className = "step-row";
+            row.innerHTML = `
+            <button type="button" class="remove-btn" onclick="removeRow(this)">삭제</button>
+            <div class="step-image-area">
+                <input type="file" name="stepImages" accept="image/*" onchange="previewStepImage(this)">
+                <img class="step-preview" alt="미리보기" />
+            </div>
+            <textarea name="stepDescriptions" placeholder="예) 양파를 채 썰어 팬에 볶는다." rows="6"></textarea>
+        `;
+            container.appendChild(row);
+        }
+
+        function removeRow(button) {
+            const row = button.closest("tr") || button.closest(".step-row");
+            if (row) row.remove();
+        }
+
+        // Step 이미지 미리보기
+        function previewStepImage(input) {
+            const preview = input.closest(".step-image-area").querySelector(".step-preview");
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = e => preview.src = e.target.result;
+                reader.readAsDataURL(file);
+            }
+        }
+        // ✅ 완성 사진 여러장 미리보기
+        function previewMultipleImages(event) {
+            const files = event.target.files;
+            const previewArea = document.getElementById("mainPreviewArea");
+            previewArea.innerHTML = "";
+            if (files.length > 0) {
+                Array.from(files).forEach(file => {
+                    const reader = new FileReader();
+                    reader.onload = e => {
+                        const img = document.createElement("img");
+                        img.src = e.target.result;
+                        img.classList.add("multi-preview-image");
+                        previewArea.appendChild(img);
+                    };
+                    reader.readAsDataURL(file);
+                });
+            } else {
+                previewArea.innerHTML = "<span>이미지를 선택하면 미리보기 됩니다</span>";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
