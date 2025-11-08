@@ -2,12 +2,15 @@ package com.spring.jiggleboggle1.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 @Getter
 @Setter
 public class RecipeVO {
 
-    private String recipeId;
+    private int recipeId;
     private String userId;
     private String categoryId;
     private String title;
@@ -27,5 +30,8 @@ public class RecipeVO {
     private String ingrAmount;
     private String[] ingrUnits;
     private String ingrUnit;
+
+    List<MultipartFile> mainImages;
+    List<MultipartFile> stepImages;
 
 }

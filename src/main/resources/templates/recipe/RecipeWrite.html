@@ -9,7 +9,7 @@
     <title>JiggleBoggle</title>
 </head>
 <body>
-<form id="mainForm" name="mainForm" method="get">
+<form id="mainForm" name="mainForm" method="post" th:action="@{/saveRecipeData}"   enctype="multipart/form-data">
 
     <div th:unless="${isLoggedIn}" th:insert="fragments/header :: site-header"></div>
     <div th:if="${isLoggedIn}" th:insert="fragments/header :: jb-site-header"></div>
@@ -45,8 +45,8 @@
 
                 <!-- 난이도 -->
                 <div class="info-item">
-                    <label for="difficulty">난이도</label>
-                    <select id="difficulty" name="difficulty" required>
+                    <label for="cookDfct">난이도</label>
+                    <select id="cookDfct" name="cookDfct" required>
                         <option value="">선택</option>
                         <option value="쉬움">쉬움</option>
                         <option value="보통">보통</option>

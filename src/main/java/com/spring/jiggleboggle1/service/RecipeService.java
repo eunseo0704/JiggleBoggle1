@@ -21,4 +21,19 @@ public class RecipeService {
     public List<RecipeVO> getSearchList(String searchName)  {
         return recipeMapper.getSearchList(searchName);
     }
+
+    public int  saveRecipeData(RecipeVO recipeVo) {
+
+        int result = 0;
+
+        //recipeId 생성
+
+        //form Data 저장
+        result = saveRecipeFormData(recipeVo);
+
+
+        return result;
+
+    }
+
 }
