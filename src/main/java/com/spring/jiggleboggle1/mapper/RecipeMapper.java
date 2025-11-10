@@ -19,4 +19,6 @@ public interface RecipeMapper {
 
     public int insertIngredients(List<RecipeVO> stepList);
 
+    public  RecipeVO getRecipeDetailData(String recipeId);
+
 }

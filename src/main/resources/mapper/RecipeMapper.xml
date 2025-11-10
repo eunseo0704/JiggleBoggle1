@@ -83,11 +83,9 @@
                     (
                      #{item.recipeId}
                     ,#{item.seq}
-                    ,#{item.imgPath}
+                    ,#{item.imagePath}
                     )
               </foreach>
-              ON DUPLICATE KEY UPDATE
-                 IMAGE_PATH = VALUES(imgPath)
     </insert>
 
     <insert id="insertRecipeSteps"  parameterType="java.util.List">
@@ -129,6 +127,22 @@
               </foreach>
     </insert>
 
+
+    <select id="getRecipeDetailData" parameterType="string" resultType="com.spring.jiggleboggle1.domain.RecipeVO">
+
+        SELECT MAIN.RECIPE_ID
+             ,MAIN.USER_ID
+             ,MAIN.CATEGORY_ID
+             ,MAIN.TITLE
+             ,MAIN.RCP_DISC
+             ,MAIN.COOK_TIME
+             ,MAIN.COOK_DFCT
+             ,MAIN.RGT_DATE
+             ,MAIN.UPD_DATE
+        FROM RECIPE_MASTER MAIN
+        WHERE MAIN.RECIPE_ID = #{recipeId}
+
+    </select>
 
 
 </mapper>

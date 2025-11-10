@@ -42,9 +42,7 @@ public class RecipeController {
 
         List<RecipeVO> recipeList = recipeService.getSearchList(searchName);
 
-
         model.addAttribute("recipeList", recipeList);
-        model.addAttribute("searchName", searchName);
 
         return "recipe/RecipeList";
 
@@ -77,11 +75,22 @@ public class RecipeController {
 
         if (result > 0) {
             redirectAttributes.addFlashAttribute("gubun", "Y"); //성공페이지 이동
-            return "redirect:/recipeWrite"; // 성공페이지 생성
+            return "redirect:/recipeList"; // 성공페이지 생성
         } else {
             redirectAttributes.addFlashAttribute("msg", "회원가입이 실패하였습니다."); // 실패
             return "redirect:/recipeWrite";
         }
+    }
+
+    @PostMapping("/recipe/detail")
+    public String recipeDetail(@RequestParam("recipeId") String recipeId, Model model) {
+
+//
+//        recipeVo = recipeService.getRecipeDetailData(recipeId);
+//
+//        model.addAttribute("recipeVo", recipeVo);
+
+        return "recipe/RecipeDetailPage"; // 상세 페이지 템플릿 이름
     }
 
 }

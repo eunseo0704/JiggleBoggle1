@@ -109,4 +109,12 @@ public class RecipeService {
 
     }
 
+    public RecipeVO getRecipeDetailData(String recipeId) {
+
+        RecipeVO recipe = recipeMapper.getRecipeDetailData(recipeId);
+
+
+
+        return recipe;
+    }
 }

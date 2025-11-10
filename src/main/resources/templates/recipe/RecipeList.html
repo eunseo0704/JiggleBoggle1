@@ -19,7 +19,7 @@
           <main class="recipe-container">
               <div class="recipe-grid">
                   <div class="recipe-card" th:each="recipe : ${recipeList}">
-                      <img th:src="${recipe.imagePath}" alt="레시피 이미지">
+                    <img th:src="${recipe.imagePath}"  th:onclick="'postDetail(' + ${recipe.recipeId} + ')'" alt="레시피 이미지">
                       <div class="recipe-info">
                           <p th:text="${recipe.title}">레시피 제목</p>
                           <small th:text="${recipe.rcpDisc}">레시피 설명</small>
@@ -32,6 +32,18 @@
 
 
       <script th:src="@{/js/common.js}"></script>
+      <script>
+
+          function postDetail(recipeId){
+              const form = document.createElement("mainForm");
+              form.method = "POST";
+              form.action = "/recipe/detail"; // 상세페이지 주소로 변
+              form.target = "_self"
+              form.submit(); // POST 전송
+          }
+
+
+      </script>
   </body>
 </html>
 
