@@ -3,16 +3,17 @@ package com.spring.jiggleboggle1.controller;
 
 import com.spring.jiggleboggle1.domain.CodeVO;
 import com.spring.jiggleboggle1.domain.RecipeVO;
+import com.spring.jiggleboggle1.security.CookieUtil;
+import com.spring.jiggleboggle1.security.JwtUtil;
 import com.spring.jiggleboggle1.service.CodeService;
 import com.spring.jiggleboggle1.service.RecipeService;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
@@ -21,11 +22,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RecipeController {
 
-    @Value("${file.upload-dir}")
-    private String uploadDir;
-
     private final RecipeService recipeService;
     private final CodeService codeService;
+    private final CookieUtil cookieUtil;
+    private final JwtUtil jwtUtil;
 
     @GetMapping("/recipeList")
     public String recipeList(Model model,RecipeVO recipeVo) {
@@ -45,9 +45,6 @@ public class RecipeController {
 
         model.addAttribute("recipeList", recipeList);
         model.addAttribute("searchName", searchName);
- //       redirectAttributes.addFlashAttribute("recipeList", recipeList);
- //       redirectAttributes.addFlashAttribute("searchName", searchName);
-
 
         return "recipe/RecipeList";
 
@@ -65,18 +62,25 @@ public class RecipeController {
     }
 
     @PostMapping("saveRecipeData")
-    public String recipeWrite(Model model, RecipeVO recipeVo, RedirectAttributes redirectAttributes) {
+    public String recipeWrite(RecipeVO recipeVo, RedirectAttributes redirectAttributes, HttpServletRequest request) {
 
-        int result = 0;
+        int result;
+        String gubun;
 
-        result = recipeService.saveRecipeData(recipeVo);
+        // JWT 쿠키에서 토큰 가져오기
+        String token = cookieUtil.getTokenFromCookies(request, "JWT_TOKEN");
+        String userId = jwtUtil.getUserIdFromToken(token);
+
+        recipeVo.setUserId(userId);
+
+        result = recipeService.saveRecipeFormData(recipeVo);
 
         if (result > 0) {
-            redirectAttributes.addFlashAttribute("msg", "회원가입이 완료되었습니다.");
-            return "redirect:/recipeWrite";
+            redirectAttributes.addFlashAttribute("gubun", "Y"); //성공페이지 이동
+            return "redirect:/recipeWrite"; // 성공페이지 생성
         } else {
-            redirectAttributes.addFlashAttribute("msg", "회원가입이 실패하였습니다.");
-            return "redirect:/signUpUserData";
+            redirectAttributes.addFlashAttribute("msg", "회원가입이 실패하였습니다."); // 실패
+            return "redirect:/recipeWrite";
         }
     }
 

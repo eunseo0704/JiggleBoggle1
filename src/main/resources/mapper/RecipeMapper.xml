@@ -5,40 +5,129 @@
 
     <select id="getRecipeList" parameterType="string" resultType="com.spring.jiggleboggle1.domain.RecipeVO">
 
-       SELECT RECIPE_ID
-             ,USER_ID
-             ,CATEGORY_ID
-             ,TITLE
-             ,RCP_DISC
-             ,COOK_TIME
-             ,COOK_DFCT
-             ,RGT_DATE
-             ,UPD_DATE
-             ,IMG_URL
-         FROM RECIPE_MASTER rm
+       SELECT MAIN.RECIPE_ID
+             ,MAIN.USER_ID
+             ,MAIN.CATEGORY_ID
+             ,MAIN.TITLE
+             ,MAIN.RCP_DISC
+             ,MAIN.COOK_TIME
+             ,MAIN.COOK_DFCT
+             ,MAIN.RGT_DATE
+             ,MAIN.UPD_DATE
+             ,IMG.IMAGE_PATH
+         FROM RECIPE_MASTER MAIN
+             ,RECIPE_IMAGE IMG
+        WHERE MAIN.RECIPE_ID  = IMG.RECIPE_ID
+          AND IMG.SEQ = 1
+        ORDER BY MAIN.RECIPE_ID, IMG.SEQ
 
     </select>
-
-
 
     <select id="getSearchList" parameterType="string" resultType="com.spring.jiggleboggle1.domain.RecipeVO">
 
-       SELECT RECIPE_ID
-             ,USER_ID
-             ,CATEGORY_ID
-             ,TITLE
-             ,RCP_DISC
-             ,COOK_TIME
-             ,COOK_DFCT
-             ,RGT_DATE
-             ,UPD_DATE
-             ,IMG_URL
-         FROM RECIPE_MASTER rm
-        WHERE TITLE LIKE CONCAT('%',#{title},'%')
+       SELECT MAIN.RECIPE_ID
+             ,MAIN.USER_ID
+             ,MAIN.CATEGORY_ID
+             ,MAIN.TITLE
+             ,MAIN.RCP_DISC
+             ,MAIN.COOK_TIME
+             ,MAIN.COOK_DFCT
+             ,MAIN.RGT_DATE
+             ,MAIN.UPD_DATE
+             ,IMG.IMAGE_PATH
+         FROM RECIPE_MASTER MAIN
+             ,RECIPE_IMAGE IMG
+        WHERE MAIN.RECIPE_ID  = IMG.RECIPE_ID
+          AND IMG.SEQ = 1
+          AND MAIN.TITLE LIKE CONCAT('%',#{title},'%')
+        ORDER BY MAIN.RECIPE_ID, IMG.SEQ
 
     </select>
 
+    <insert id="saveRecipeFormData" parameterType="com.spring.jiggleboggle1.domain.RecipeVO">
 
+        INSERT INTO RECIPE_MASTER
+                   (
+                     RECIPE_ID
+                    ,USER_ID
+                    ,CATEGORY_ID
+                    ,TITLE
+                    ,RCP_DISC
+                    ,COOK_TIME
+                    ,COOK_DFCT
+                    ,RGT_DATE
+                    ,UPD_DATE
+                    ,TAG_NAME
+        ) VALUES (
+                     #{recipeId}
+                    ,#{userId}
+                    ,#{categoryId}
+                    ,#{title}
+                    ,#{rcpDisc}
+                    ,#{cookTime}
+                    ,#{cookDfct}
+                    ,NOW()
+                    ,NOW()
+                    ,#{tagName}
+                 )
+    </insert>
+
+    <insert id="insertRecipeImages"  parameterType="java.util.List">
+        INSERT INTO RECIPE_IMAGE
+                    (RECIPE_ID
+                    ,SEQ
+                    ,IMAGE_PATH
+                    )
+              VALUES
+              <foreach collection="list" item="item" separator=",">
+                    (
+                     #{item.recipeId}
+                    ,#{item.seq}
+                    ,#{item.imgPath}
+                    )
+              </foreach>
+              ON DUPLICATE KEY UPDATE
+                 IMAGE_PATH = VALUES(imgPath)
+    </insert>
+
+    <insert id="insertRecipeSteps"  parameterType="java.util.List">
+        INSERT INTO RECIPE_STEP
+                    (RECIPE_ID
+                    ,STEP_ORDER
+                    ,STEP_DESCRIPTION
+                    ,STEP_IMAGE_PATH
+                    )
+              VALUES
+              <foreach collection="list" item="item" separator=",">
+                    (
+                     #{item.recipeId}
+                    ,#{item.stepOrder}
+                    ,#{item.stepDescription}
+                    ,#{item.stepImagePath}
+                    )
+              </foreach>
+    </insert>
+
+
+    <insert id="insertIngredients"  parameterType="java.util.List">
+        INSERT INTO INGREDIENT
+                    (RECIPE_ID
+                    ,SEQ
+                    ,INGR_NAME
+                    ,INGR_AMOUNT
+                    ,INGR_UNIT
+                    )
+              VALUES
+              <foreach collection="list" item="item" separator=",">
+                    (
+                     #{item.recipeId}
+                    ,#{item.seq}
+                    ,#{item.ingrName}
+                    ,#{item.ingrAmount}
+                    ,#{item.ingrUnit}
+                    )
+              </foreach>
+    </insert>
 
 
 

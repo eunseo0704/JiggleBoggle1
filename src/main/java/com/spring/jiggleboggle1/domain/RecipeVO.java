@@ -10,7 +10,8 @@ import java.util.List;
 @Setter
 public class RecipeVO {
 
-    private int recipeId;
+    private String recipeId;
+    private int seq;
     private String userId;
     private String categoryId;
     private String title;
@@ -19,11 +20,10 @@ public class RecipeVO {
     private String cookDfct;
     private String rgtDate;
     private String updDate;
-    private String imgUrl;
-    private String status;
     private String searchName;
     private String tagName;
 
+    private String ingrId;
     private String[] ingrNames;
     private String ingrName;
     private String[] ingrAmounts;
@@ -31,7 +31,15 @@ public class RecipeVO {
     private String[] ingrUnits;
     private String ingrUnit;
 
+    private String imagePath;
+    private int imageId;
+
     List<MultipartFile> mainImages;
     List<MultipartFile> stepImages;
+
+    private int stepOrder;
+    private String stepDescription;
+    private String[] stepDescriptions;
+    private String stepImagePath;
 
 }

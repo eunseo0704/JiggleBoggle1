@@ -16,14 +16,12 @@
     <h2>레시피 작성 📝</h2>
     <div class="recipe-container">
 
-
         <!-- 완성 사진 여러 장 -->
         <label>완성 사진 📸</label>
-        <input type="file" id="mainImageInput" name="mainImages" accept="image/*" multiple onchange="previewMultipleImages(event)">
+        <input type="file" id="mainImages" name="mainImages" accept="image/*" multiple onchange="previewMultipleImages(event)">
         <div id="mainPreviewArea" class="multi-preview-area">
             <span>미리보기</span>
         </div>
-
 
         <label for="title">레시피 제목</label>
         <input type="text" id= "title"  name="title" placeholder="예) 소고기 미역국 끓이기" class="input_style wd100">
@@ -42,7 +40,6 @@
                         <option th:each="cat : ${categoryList}" th:value="${cat.code}" th:text="${cat.codeName}"></option>
                     </select>
                 </div>
-
                 <!-- 난이도 -->
                 <div class="info-item">
                     <label for="cookDfct">난이도</label>
@@ -53,7 +50,6 @@
                         <option value="어려움">어려움</option>
                     </select>
                 </div>
-
                 <!-- 요리시간 -->
                 <div class="info-item">
                     <label for="cookTime">요리 시간</label>
@@ -83,16 +79,16 @@
             </thead>
             <tbody>
             <tr>
-                <td><input type="text" name="ingrNames" placeholder="예) 소고기"      class="input_style wd90"></td>
-                <td><input type="text" name="ingrAmounts" placeholder="예) 200"    class="input_style wd90"></td>
-                <td><input type="text" name="ingrUnits" placeholder="예) g"        class="input_style wd90"></td>
+                <td><input type="text" id="ingrNames" name="ingrNames" placeholder="예) 소고기"        class="input_style wd90"></td>
+                <td><input type="text" id="ingrAmounts" name="ingrAmounts" placeholder="예) 200"     class="input_style wd90"></td>
+                <td><input type="text" id="ingrUnits" name="ingrUnits" placeholder="예) g"           class="input_style wd90"></td>
                 <td><button type="button" class="remove-btn" onclick="removeRow(this)">삭제</button></td>
             </tr>
             </tbody>
         </table>
 
         <!-- 요리 단계 -->
-        <label>요리 순서 <button type="button" class="add-btn" onclick="addStepRow()">＋ 단계 추가</button></label>
+        <label>요리 순서 <button type="button" class="add-btn" onclick="addStepRow()">＋ 단계추가</button></label>
         <div id="stepContainer" class="step-container">
             <div class="step-row">
                 <button type="button" class="remove-btn" onclick="removeRow(this)">삭제</button>
@@ -100,14 +96,12 @@
                     <input type="file" name="stepImages" accept="image/*" onchange="previewStepImage(this)">
                     <img class="step-preview" alt="미리보기" />
                 </div>
-                <textarea name="stepDescriptions" placeholder="예) 양파를 채 썰어 팬에 볶는다." rows="6"></textarea>
+                <textarea id="stepDescriptions" name="stepDescriptions" placeholder="예) 양파를 채 썰어 팬에 볶는다." rows="6"></textarea>
             </div>
         </div>
 
-
-
         <label>요리 팁 & 주의사항 💡</label>
-        <textarea name="tips" placeholder="예) 고기를 넣을 땐 설탕 먼저 넣기!"   rows="6"></textarea>
+        <textarea id="recipeTips" name="recipeTips" placeholder="예) 고기를 넣을 땐 설탕 먼저 넣기!"   rows="6"></textarea>
 
         <div class="btn-area">
             <button type="submit">작성하기</button>
@@ -116,7 +110,7 @@
 </form>
 
     <script>
-        // ✅ 재료 추가/삭제
+        // 재료 추가/삭제
         function addIngredientRow() {
             const tbody = document.querySelector("#ingredientTable tbody");
             const row = document.createElement("tr");

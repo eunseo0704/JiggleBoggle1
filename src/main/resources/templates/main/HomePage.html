@@ -20,7 +20,7 @@
                 <div class="recipe-list" id="recipeList">
                   <!-- 예시 데이터, Thymeleaf 반복문으로 대체 -->
                     <div class="recipe-card" th:each="recipe : ${recipeList}">
-                        <img th:src="@{${recipe.imgUrl}}" alt="레시피 이미지">
+                        <img th:src="@{${recipe.imagePath}}" alt="레시피 이미지">
                         <p th:text="${recipe.title}">레시피 제목</p>
                     </div>
                 </div>
