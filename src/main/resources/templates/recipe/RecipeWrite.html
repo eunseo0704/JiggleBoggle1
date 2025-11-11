@@ -45,20 +45,15 @@
                     <label for="cookDfct">난이도</label>
                     <select id="cookDfct" name="cookDfct" required>
                         <option value="">선택</option>
-                        <option value="쉬움">쉬움</option>
-                        <option value="보통">보통</option>
-                        <option value="어려움">어려움</option>
+                        <option th:each="cat : ${cookDfctList}" th:value="${cat.code}" th:text="${cat.codeName}"></option>
                     </select>
                 </div>
                 <!-- 요리시간 -->
                 <div class="info-item">
                     <label for="cookTime">요리 시간</label>
-                    <select id="cookTime" name="cookTime" required>
+                    <select id="cooktime" name="cooktime" required>
                         <option value="">선택</option>
-                        <option value="10분 이내">10분 이내</option>
-                        <option value="30분 이내">30분 이내</option>
-                        <option value="1시간 이내">1시간 이내</option>
-                        <option value="1시간 이상">1시간 이상</option>
+                        <option th:each="cat : ${cooktimeList}" th:value="${cat.code}" th:text="${cat.codeName}"></option>
                     </select>
                 </div>
             </div>

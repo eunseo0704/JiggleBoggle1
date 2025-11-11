@@ -57,7 +57,7 @@
                     ,COOK_DFCT
                     ,RGT_DATE
                     ,UPD_DATE
-                    ,TAG_NAME
+                    ,TAG_NAMEx
         ) VALUES (
                      #{recipeId}
                     ,#{userId}

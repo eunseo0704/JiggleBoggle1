@@ -10,6 +10,7 @@ import org.springframework.security.oauth2.client.authentication.OAuth2Authentic
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Arrays;
 import java.util.List;
@@ -67,6 +68,22 @@ public class MainController {
         // 뷰 반환
         return "user/myPage";
     }
+
+    @GetMapping("/rankPage")
+    public String rankPage(Model model) {
+
+        List<RecipeVO> recipeList = recipeService.getRecipeList();
+        model.addAttribute("recipeList", recipeList);
+
+        return "main/RankPage";
+    }
+
+    @GetMapping("/temp")
+    public String tempPage(Model model, @RequestParam String recipeTitle) {
+        model.addAttribute("recipeTitle", recipeTitle);
+        return "recipe/temp";
+    }
+
 
 
 }

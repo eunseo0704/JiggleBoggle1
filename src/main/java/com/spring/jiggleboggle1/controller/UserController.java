@@ -80,14 +80,7 @@ public class UserController {
         redirectAttributes.addFlashAttribute("msg", "로그아웃 되었습니다.");
         return "redirect:/login";
     }
-    @GetMapping("/rankPage")
-    public String rankPage(Model model) {
 
-        List<RecipeVO> recipeList = recipeService.getRecipeList();
-        model.addAttribute("recipeList", recipeList);
-
-        return "main/RankPage";
-    }
 
 
 }
