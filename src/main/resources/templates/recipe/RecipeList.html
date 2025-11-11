@@ -23,10 +23,6 @@
                           <img th:src="${recipe.imagePath}" alt="레시피 이미지">
                       </a>
 
-                      <div class="recipe-card" th:each="recipe : ${recipeList}">
-                          <a th:href="@{/temp(recipeTitle=${recipe.title})}">
-                              <img th:src="${recipe.imagePath}" alt="레시피 이미지">
-                          </a>
                           <div class="recipe-info">
                               <p th:text="${recipe.title}">레시피 제목</p>
                               <small th:text="${recipe.rcpDisc}">레시피 설명</small>
