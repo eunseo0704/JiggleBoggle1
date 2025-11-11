@@ -32,7 +32,7 @@ public class RecipeController {
 
         List<RecipeVO> recipeList = recipeService.getRecipeList();
         model.addAttribute("recipeList", recipeList);
-        model.addAttribute("recipeVo", recipeVo);
+       // model.addAttribute("recipeVo", recipeVo);
 
         return "recipe/RecipeList";
     }
@@ -74,10 +74,10 @@ public class RecipeController {
         result = recipeService.saveRecipeFormData(recipeVo);
 
         if (result > 0) {
-            redirectAttributes.addFlashAttribute("gubun", "Y"); //성공페이지 이동
-            return "redirect:/recipeList"; // 성공페이지 생성
+            redirectAttributes.addFlashAttribute("msg", "저장성공"); //성공페이지 이동
+            return "redirect:/MainPage"; // 성공페이지 생성
         } else {
-            redirectAttributes.addFlashAttribute("msg", "회원가입이 실패하였습니다."); // 실패
+            redirectAttributes.addFlashAttribute("msg", "저장 실패하였습니다."); // 실패
             return "redirect:/recipeWrite";
         }
     }
