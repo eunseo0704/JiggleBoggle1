@@ -52,8 +52,12 @@ public class RecipeController {
     public String recipeWrite(Model model) {
 
         List<CodeVO> categoryList = codeService.codeList("CTG");
+        List<CodeVO> cookDfctList = codeService.codeList("DFC");
+        List<CodeVO> cooktimeList = codeService.codeList("COT");
 
         model.addAttribute("categoryList", categoryList);
+        model.addAttribute("cookDfctList", cookDfctList);
+        model.addAttribute("cooktimeList", cooktimeList);
 
         return "recipe/RecipeWrite";
 
@@ -63,6 +67,7 @@ public class RecipeController {
     public String recipeWrite(RecipeVO recipeVo, RedirectAttributes redirectAttributes, HttpServletRequest request) {
 
         int result;
+
         String gubun;
 
         // JWT 쿠키에서 토큰 가져오기

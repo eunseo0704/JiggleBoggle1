@@ -39,7 +39,7 @@ public class RecipeService {
 
 //recipeId 생성
         String datePart = new SimpleDateFormat("yyMMdd").format(new Date());
-        int randomPart = new Random().nextInt(900) + 100; // 4자리 랜덤
+        int randomPart = new Random().nextInt(900) + 100; // 3자리 랜덤
         String recipeId = "RCP" + datePart + randomPart;
 
         recipeVo.setRecipeId(recipeId);
@@ -101,9 +101,6 @@ public class RecipeService {
         if (!ingList.isEmpty()) {
             result = recipeMapper.insertIngredients(ingList);
         }
-
-
-
 
         return result;
 

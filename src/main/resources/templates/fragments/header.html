@@ -6,10 +6,9 @@
         <span id="moveIcon">JiggleBoggle</span>
     </div>
     <nav class="menu">
-        <a href="#">메뉴</a>
-        <a href="#">검색</a>
-        <a href="#">AI레시피</a>
-        <a href="#">지글뽀글</a>
+        <a href="/intro">지글뽀글</a>
+        <a href="/recipeList">레시피조회</a>
+        <a href="/rankPage">랭킹</a>
     </nav>
     <div class="auth">
         <a th:href="@{/login}" class="login-btn">로그인</a>
@@ -33,10 +32,13 @@
         </div>
         <!-- 로그인 / 마이페이지 -->
         <div class="jb-user-menu">
-            <div class="jb-mypage-icon">
-                <img th:src="@{/imgs/biz/user-icon.jpeg}" id="circle-user"/>
-                <span>MY Page</span>
-            </div>
+
+            <a th:href="@{/myPage}">
+                <div class="jb-mypage-icon">
+                    <img th:src="@{/imgs/biz/user-icon.jpeg}" id="circle-user"/>
+                    <span>MY Page</span>
+                </div>
+            </a>
             <a th:href="@{/recipeWrite}">
             <div class="jb-mypage-icon">
                 <img th:src="@{/imgs/biz/register_icon.jpeg}"/>
@@ -63,6 +65,5 @@
         <a href="/recipeList">레시피 조회</a>
         <a href="/rankPage">랭킹</a>
         <a href="#">레시피 추천</a>
-        <a href="/myPage">임시 Mypage</a>
     </nav>
 </header>
