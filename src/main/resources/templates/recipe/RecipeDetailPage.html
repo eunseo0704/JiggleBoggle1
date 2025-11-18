@@ -9,25 +9,26 @@
     <title>JiggleBoggle</title>
 </head>
 <body>
-<form id="mainForm" name="mainForm" method="post" th:action="@{/saveRecipeData}"   enctype="multipart/form-data">
+<form id="mainForm" name="mainForm" method="post" th:action="@{/saveRecipeData}"  th:object="${recipe}" enctype="multipart/form-data">
 
     <div th:unless="${isLoggedIn}" th:insert="fragments/header :: site-header"></div>
     <div th:if="${isLoggedIn}" th:insert="fragments/header :: jb-site-header"></div>
-    <h2>레시피 작성 📝</h2>
+
     <div class="recipe-container">
 
         <!-- 완성 사진 여러 장 -->
         <label>완성 사진 📸</label>
-        <input type="file" id="mainImages" name="mainImages" accept="image/*" multiple onchange="previewMultipleImages(event)">
-        <div id="mainPreviewArea" class="multi-preview-area">
-            <span>미리보기</span>
+        <div id="mainPreviewArea" class="multi-preview-area" >
+            <span th:each="img : ${imgList}">
+                <img th:src="${img.imagePath}" class="multi-preview-image">
+            </span>
         </div>
 
         <label for="title">레시피 제목</label>
-        <input type="text" id= "title"  name="title" placeholder="예) 소고기 미역국 끓이기" class="input_style wd100">
+        <input type="text" id= "title"  name="title"  th:value="${recipe.title}"  readonly class="input_style wd100">
 
         <label>레시피 소개 🍽️</label>
-        <textarea id="rcpDisc" name="rcpDisc" placeholder="예) 어머니의 미역국 레시피를..." rows="6"></textarea>
+        <textarea id="rcpDisc" name="rcpDisc"  th:text="${recipe.rcpDisc}"  readonly rows="6"></textarea>
 
         <!-- 🧾 카테고리 / 난이도 / 요리시간 -->
         <div class="form-section">
@@ -35,77 +36,63 @@
                 <!-- 카테고리 -->
                 <div class="info-item">
                     <label for="categoryId">카테고리</label>
-                    <select id="categoryId" name="categoryId" required>
+                    <select id="categoryId" name="categoryId" disabled>
                         <option value="">선택</option>
-                        <option th:each="cat : ${categoryList}" th:value="${cat.code}" th:text="${cat.codeName}"></option>
+                        <option th:each="cat : ${categoryList}" th:value="${cat.code}" th:text="${cat.codeName}" th:selected="${recipe.categoryId == cat.code}"></option>
                     </select>
                 </div>
                 <!-- 난이도 -->
                 <div class="info-item">
                     <label for="cookDfct">난이도</label>
-                    <select id="cookDfct" name="cookDfct" required>
+                    <select id="cookDfct" name="cookDfct" disabled>
                         <option value="">선택</option>
-                        <option value="쉬움">쉬움</option>
-                        <option value="보통">보통</option>
-                        <option value="어려움">어려움</option>
+                        <option th:each="cat : ${cookDfctList}" th:value="${cat.code}" th:text="${cat.codeName}" th:selected="${recipe.cookDfct == cat.code}"></option>
                     </select>
                 </div>
                 <!-- 요리시간 -->
                 <div class="info-item">
                     <label for="cookTime">요리 시간</label>
-                    <select id="cookTime" name="cookTime" required>
+                    <select id="cookTime" name="cookTime" disabled>
                         <option value="">선택</option>
-                        <option value="10분 이내">10분 이내</option>
-                        <option value="30분 이내">30분 이내</option>
-                        <option value="1시간 이내">1시간 이내</option>
-                        <option value="1시간 이상">1시간 이상</option>
+                        <option th:each="cat : ${cooktimeList}" th:value="${cat.code}" th:text="${cat.codeName}" th:selected="${recipe.cookTime== cat.code}"></option>
                     </select>
                 </div>
             </div>
         </div>
 
         <label>태그 #️⃣</label>
-        <input type="text" id="tagName" name="tagName" placeholder="예) 국물요리, 소고기, 집밥" class="input_style wd100">
+        <input type="text" id="tagName" name="tagName"  th:value="${recipe.tagName}" readonly class="input_style wd100">
 
-        <label>재료 정보  <button type="button" class="add-btn" onclick="addIngredientRow()">＋ 재료 추가</button> </label>
         <table id="ingredientTable" class="ingredient-table">
             <thead>
             <tr>
                 <th>재료명</th>
                 <th>수량</th>
                 <th>단위</th>
-                <th></th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td><input type="text" id="ingrNames" name="ingrNames" placeholder="예) 소고기"        class="input_style wd90"></td>
-                <td><input type="text" id="ingrAmounts" name="ingrAmounts" placeholder="예) 200"     class="input_style wd90"></td>
-                <td><input type="text" id="ingrUnits" name="ingrUnits" placeholder="예) g"           class="input_style wd90"></td>
-                <td><button type="button" class="remove-btn" onclick="removeRow(this)">삭제</button></td>
+            <tr th:each="ing : ${ingrList}">
+                <td><input type="text" id="ingrNames" name="ingrNames" th:value="${ing.ingrName}"    readonly class="input_style wd90"></td>
+                <td><input type="text" id="ingrAmounts" name="ingrAmounts" th:value="${ing.ingrAmount}"  readonly   class="input_style wd90"></td>
+                <td><input type="text" id="ingrUnits" name="ingrUnits" th:value="${ing.ingrUnit}"    readonly     class="input_style wd90"></td>
             </tr>
             </tbody>
         </table>
 
         <!-- 요리 단계 -->
-        <label>요리 순서 <button type="button" class="add-btn" onclick="addStepRow()">＋ 단계추가</button></label>
         <div id="stepContainer" class="step-container">
-            <div class="step-row">
-                <button type="button" class="remove-btn" onclick="removeRow(this)">삭제</button>
+            <div class="step-row" th:each="step:${stepList}">
                 <div class="step-image-area">
-                    <input type="file" name="stepImages" accept="image/*" onchange="previewStepImage(this)">
-                    <img class="step-preview" alt="미리보기" />
+                    <img th:src="${step.stepImagePath}" class="step-preview" alt="미리보기" />
                 </div>
-                <textarea id="stepDescriptions" name="stepDescriptions" placeholder="예) 양파를 채 썰어 팬에 볶는다." rows="6"></textarea>
+                <textarea id="stepDescriptions" name="stepDescriptions" th:text="${step.stepDescription}" readonly rows="6"></textarea>
             </div>
         </div>
 
         <label>요리 팁 & 주의사항 💡</label>
-        <textarea id="recipeTips" name="recipeTips" placeholder="예) 고기를 넣을 땐 설탕 먼저 넣기!"   rows="6"></textarea>
+        <textarea id="recipeTips" name="recipeTips" th:text="${recipe.recipeTips}" readonly  rows="6"></textarea>
 
-        <div class="btn-area">
-            <button type="submit">작성하기</button>
-        </div>
     </div>
 </form>
 

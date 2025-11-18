@@ -106,12 +106,45 @@ public class RecipeService {
 
     }
 
-    public RecipeVO getRecipeDetailData(String recipeId) {
+    public RecipeVO getRecipeDetailData(String recipeId, String userId) {
+        int result;
 
-        RecipeVO recipe = recipeMapper.getRecipeDetailData(recipeId);
+        RecipeVO recipe = new RecipeVO();
+
+        //userId가 있을때
+        if (userId != null && !userId.isEmpty()) {
+
+            //유저 이미 조회했는지 확인
+            Integer exists = recipeMapper.checkUserView(recipeId, userId);
+
+            if (exists != null && exists > 0) {
+                recipe = recipeMapper.getRecipeDetailData(recipeId);
+                recipe.setImageList(recipeMapper.getImgList(recipeId));
+                recipe.setStepList(recipeMapper.getStepList(recipeId));
+                recipe.setIngrList(recipeMapper.getIngrList(recipeId));
+
+                return recipe;
+
+            }else{
+                // 실제 조회수 추가
+                result = recipeMapper.insetUserView(recipeId, userId);
+
+                result = recipeMapper.updateUserView(recipeId);
 
 
+
+            }
+
+        }
+
+        recipe = recipeMapper.getRecipeDetailData(recipeId);
+        recipe.setImageList(recipeMapper.getImgList(recipeId));
+        recipe.setStepList(recipeMapper.getStepList(recipeId));
+        recipe.setIngrList(recipeMapper.getIngrList(recipeId));
 
         return recipe;
     }
+
+
+
 }

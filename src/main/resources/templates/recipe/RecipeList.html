@@ -19,7 +19,7 @@
           <main class="recipe-container">
               <div class="recipe-grid">
                   <div class="recipe-card" th:each="recipe : ${recipeList}">
-                      <a th:href="@{/temp(recipeTitle=${recipe.title})}">
+                      <a th:href="@{/getRecipeData(recipeId=${recipe.recipeId})}">
                           <img th:src="${recipe.imagePath}" alt="레시피 이미지">
                       </a>
 

@@ -51,7 +51,7 @@
                 <!-- 요리시간 -->
                 <div class="info-item">
                     <label for="cookTime">요리 시간</label>
-                    <select id="cooktime" name="cooktime" required>
+                    <select id="cookTime" name="cookTime" required>
                         <option value="">선택</option>
                         <option th:each="cat : ${cooktimeList}" th:value="${cat.code}" th:text="${cat.codeName}"></option>
                     </select>

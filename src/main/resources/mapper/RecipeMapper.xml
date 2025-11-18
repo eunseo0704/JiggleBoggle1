@@ -57,7 +57,8 @@
                     ,COOK_DFCT
                     ,RGT_DATE
                     ,UPD_DATE
-                    ,TAG_NAMEx
+                    ,TAG_NAME
+                    ,RECIPE_TIPS
         ) VALUES (
                      #{recipeId}
                     ,#{userId}
@@ -69,6 +70,7 @@
                     ,NOW()
                     ,NOW()
                     ,#{tagName}
+                    ,#{recipeTips}
                  )
     </insert>
 
@@ -139,10 +141,79 @@
              ,MAIN.COOK_DFCT
              ,MAIN.RGT_DATE
              ,MAIN.UPD_DATE
+             ,MAIN.RECIPE_TIPS
+             ,MAIN.TAG_NAME
         FROM RECIPE_MASTER MAIN
         WHERE MAIN.RECIPE_ID = #{recipeId}
 
     </select>
+
+
+    <select id="getImgList" parameterType="string" resultType="com.spring.jiggleboggle1.domain.RecipeVO">
+
+        select RECIPE_ID
+              ,IMAGE_PATH
+          from RECIPE_IMAGE
+         where RECIPE_ID = #{recipeId}
+
+    </select>
+
+
+    <select id="getStepList" parameterType="string" resultType="com.spring.jiggleboggle1.domain.RecipeVO">
+
+        select RECIPE_ID,
+               STEP_ORDER,
+               STEP_DESCRIPTION,
+               STEP_IMAGE_PATH
+        from RECIPE_STEP
+        where RECIPE_ID = #{recipeId}
+    </select>
+
+    <select id="getIngrList" parameterType="string" resultType="com.spring.jiggleboggle1.domain.RecipeVO">
+
+        select RECIPE_ID,
+               SEQ,
+               INGR_NAME,
+               INGR_AMOUNT,
+               INGR_UNIT
+        from INGREDIENT
+        where RECIPE_ID = #{recipeId}
+    </select>
+
+
+    <select id="checkUserView" resultType="int">
+
+        select COUNT(*) CNT
+        from RECIPE_VIEW_LOG
+        where RECIPE_ID = #{recipeId}
+            AND USER_ID = #{userId}
+    </select>
+
+
+    <insert id="insetUserView" parameterType="string">
+
+        INSERT INTO recipe_view_log
+                    (
+                      RECIPE_ID
+                    ,USER_ID
+                    ,VIEWED_AT
+                    ) VALUES (
+                               #{recipeId}
+                             ,#{userId}
+                             ,NOW()
+                             )
+
+    </insert>
+
+
+    <update id="updateUserView" parameterType="string">
+
+        UPDATE RECIPE_MASTER
+            SET VIEW_COUNT = VIEW_COUNT + 1
+        WHERE RECIPE_ID = #{recipeId}
+
+</update>
+
 
 
 </mapper>

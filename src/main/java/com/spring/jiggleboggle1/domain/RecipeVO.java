@@ -22,6 +22,7 @@ public class RecipeVO {
     private String updDate;
     private String searchName;
     private String tagName;
+    private String recipeTips;
 
     private String ingrId;
     private String[] ingrNames;
@@ -41,5 +42,9 @@ public class RecipeVO {
     private String stepDescription;
     private String[] stepDescriptions;
     private String stepImagePath;
+
+    List<RecipeVO> imageList; // 이미지 리스트
+    List<RecipeVO> stepList; //단계리스트
+    List<RecipeVO> ingrList; //재료 리스트
 
 }

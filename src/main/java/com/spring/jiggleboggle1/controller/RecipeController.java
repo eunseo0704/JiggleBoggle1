@@ -8,6 +8,7 @@ import com.spring.jiggleboggle1.security.JwtUtil;
 import com.spring.jiggleboggle1.service.CodeService;
 import com.spring.jiggleboggle1.service.RecipeService;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -48,23 +49,10 @@ public class RecipeController {
 
     }
 
-    @GetMapping("/recipeWrite")
-    public String recipeWrite(Model model) {
 
-        List<CodeVO> categoryList = codeService.codeList("CTG");
-        List<CodeVO> cookDfctList = codeService.codeList("DFC");
-        List<CodeVO> cooktimeList = codeService.codeList("COT");
-
-        model.addAttribute("categoryList", categoryList);
-        model.addAttribute("cookDfctList", cookDfctList);
-        model.addAttribute("cooktimeList", cooktimeList);
-
-        return "recipe/RecipeWrite";
-
-    }
 
     @PostMapping("/saveRecipeData")
-    public String recipeWrite(RecipeVO recipeVo, RedirectAttributes redirectAttributes, HttpServletRequest request) {
+    public String saveRecipeData(RecipeVO recipeVo, RedirectAttributes redirectAttributes, HttpServletRequest request) {
 
         int result;
 
@@ -87,10 +75,53 @@ public class RecipeController {
         }
     }
 
-    @GetMapping("/temp")
-    public String tempPage(Model model, @RequestParam String recipeTitle) {
-        model.addAttribute("recipeTitle", recipeTitle);
-        return "recipe/temp";
+
+    @GetMapping("/recipeWrite")
+    public String recipeWrite(Model model) {
+
+        List<CodeVO> categoryList = codeService.codeList("CTG");
+        List<CodeVO> cookDfctList = codeService.codeList("DFC");
+        List<CodeVO> cooktimeList = codeService.codeList("COT");
+
+        model.addAttribute("categoryList", categoryList);
+        model.addAttribute("cookDfctList", cookDfctList);
+        model.addAttribute("cooktimeList", cooktimeList);
+
+        return "recipe/RecipeWrite";
+
+    }
+
+    @GetMapping("/getRecipeData")
+    public String getRecipeData(Model model, @RequestParam String recipeId, HttpServletRequest request) {
+
+        RecipeVO recipe = new RecipeVO();
+        String userId ="";
+        String token = cookieUtil.getTokenFromCookies(request, "JWT_TOKEN");
+        if(token != null) {
+            userId = jwtUtil.getUserIdFromToken(token);
+        }
+
+
+        List<CodeVO> categoryList = codeService.codeList("CTG");
+        List<CodeVO> cookDfctList = codeService.codeList("DFC");
+        List<CodeVO> cooktimeList = codeService.codeList("COT");
+
+
+        recipe = recipeService.getRecipeDetailData(recipeId, userId);
+
+        List<RecipeVO> imgList = recipe.getImageList();
+        List<RecipeVO> stepList = recipe.getStepList();
+        List<RecipeVO> ingrList = recipe.getIngrList();
+
+        model.addAttribute("categoryList", categoryList);
+        model.addAttribute("cookDfctList", cookDfctList);
+        model.addAttribute("cooktimeList", cooktimeList);
+        model.addAttribute("recipe", recipe);
+        model.addAttribute("imgList", imgList);
+        model.addAttribute("stepList", stepList);
+        model.addAttribute("ingrList", ingrList);
+
+        return "recipe/RecipeDetailPage";
     }
 
 }
