@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" th:href="@{/css/style.css}" />
+      <link rel="stylesheet" th:href="@{/css/homePage.css}" />
+
+  </head>
+  <body>
+  <form id="mainForm" name="mainForm" method="post" th:action="@{/saveRecipeData}"   enctype="multipart/form-data">
+      <div th:unless="${isLoggedIn}" th:insert="fragments/header :: site-header"></div>
+      <div th:if="${isLoggedIn}" th:insert="fragments/header :: jb-site-header"></div>
+  </form>
+
+    <main class="content">
+      <section class="recipe-carousel-section">
+        <h2 class="section-title">백꿀팁 댓글별 BEST 요리모음</h2>
+        <div class="carousel-container">
+          <button class="arrow left-arrow">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="recipe-list">
+            <div class="recipe-card special-card">
+              <img
+                src="/imgs/let'sWrite.svg"
+                alt="나만의 레시피 등록"
+                class="card-image-placeholder"
+              />
+              <div class="card-text">
+                <p>나만의 레시피</p>
+                <p>등록하러 가기</p>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+
+            <div class="recipe-card">
+              <img
+                src="/imgs/forkcutlet.svg"
+                alt="달걀밥 돈까스 덮밥 레시피"
+                class="card-image-placeholder"
+              />
+              <div class="card-text">
+                <p>달콤바삭 돈까스</p>
+                <p>덮밥 레시피</p>
+              </div>
+            </div>
+
+            <div class="recipe-card">
+              <img
+                src="/imgs/omelet.svg"
+                alt="부들꼬소 오꼬노미야키 레시피"
+                class="card-image-placeholder"
+              />
+              <div class="card-text">
+                <p>부들꼬소 오코노미야키</p>
+                <p>오물렛 레시피</p>
+              </div>
+            </div>
+
+            <div class="recipe-card">
+              <img
+                src="/imgs/noodle.svg"
+                alt="후루룩짭짭 맛좋은 라면 레시피"
+                class="card-image-placeholder"
+              />
+              <div class="card-text">
+                <p>후루룩짭짭 맛좋은</p>
+                <p>라면 레시피</p>
+              </div>
+            </div>
+
+            <div class="recipe-card">
+              <img
+                src="/imgs/beef.svg"
+                alt="츄리릿 엄마다 손맛 바비큐 레시피"
+                class="card-image-placeholder"
+              />
+              <div class="card-text">
+                <p>추억의 엄마의 손맛</p>
+                <p>바비큐 레시피</p>
+              </div>
+            </div>
+
+            <div class="recipe-card">
+              <img
+                src="/imgs/pie.svg"
+                alt="딸기타르트 레시피"
+                class="card-image-placeholder"
+              />
+              <div class="card-text">
+                <p>딸기타르트</p>
+                <p>레시피</p>
+              </div>
+            </div>
+            <div class="recipe-card">
+              <img
+                src="/imgs/forkcutlet2.svg"
+                alt="치즈돈까스 레시피"
+                class="card-image-placeholder"
+              />
+              <div class="card-text">
+                <p>치즈돈까스</p>
+                <p>레시피</p>
+              </div>
+            </div>
+          </div>
+          <button class="arrow right-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="webfood-intro-section">
+        <div class="section-header">
+          <h2 class="section-title">웹푸드 소개</h2>
+          <span class="more-link">더보기</span>
+        </div>
+        <div class="carousel-container">
+          <button class="arrow left-arrow">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="food-list">
+            <div class="food-item">
+              <div class="food-circle carrot">
+                <img
+                  src="./images/food_carrot.png"
+                  alt="당근 이미지"
+                  class="food-image"
+                />
+              </div>
+              <p class="food-name">강찰당근</p>
+              <button class="subscribe-btn">+소식받기</button>
+            </div>
+            <div class="food-item">
+              <div class="food-circle tomato">
+                <img
+                  src="./images/food_tomato.png"
+                  alt="토마토 이미지"
+                  class="food-image"
+                />
+              </div>
+              <p class="food-name">건강한토마토</p>
+              <button class="subscribe-btn">+소식받기</button>
+            </div>
+            <div class="food-item">
+              <div class="food-circle cucumber">
+                <img
+                  src="./images/food_cucumber.png"
+                  alt="오이 이미지"
+                  class="food-image"
+                />
+              </div>
+              <p class="food-name">아이헤잇오이</p>
+              <button class="subscribe-btn">+소식받기</button>
+            </div>
+            <div class="food-item">
+              <div class="food-circle eggplant">
+                <img
+                  src="./images/food_eggplant.png"
+                  alt="가지 이미지"
+                  class="food-image"
+                />
+              </div>
+              <p class="food-name">바나니가지</p>
+              <button class="subscribe-btn">+소식받기</button>
+            </div>
+            <div class="food-item">
+              <div class="food-circle cabbage">
+                <img
+                  src="./images/food_cabbage.png"
+                  alt="양배추 이미지"
+                  class="food-image"
+                />
+              </div>
+              <p class="food-name">광주양배추</p>
+              <button class="subscribe-btn">+소식받기</button>
+            </div>
+            <div class="food-item">
+              <div class="food-circle corn">
+                <img
+                  src="./images/food_corn.png"
+                  alt="옥수수 이미지"
+                  class="food-image"
+                />
+              </div>
+              <p class="food-name">찹콘</p>
+              <button class="subscribe-btn">+소식받기</button>
+            </div>
+            <div class="food-item">
+              <div class="food-circle sweet-potato">
+                <img
+                  src="./images/food_sweetpotato.png"
+                  alt="고구마 이미지"
+                  class="food-image"
+                />
+              </div>
+              <p class="food-name">군고구마</p>
+              <button class="subscribe-btn">+소식받기</button>
+            </div>
+            <div class="food-item">
+              <div class="food-circle grape">
+                <img
+                  src="./images/food_grape.png"
+                  alt="블루베리 이미지"
+                  class="food-image"
+                />
+              </div>
+              <p class="food-name">블루베리요리사</p>
+              <button class="subscribe-btn">+소식받기</button>
+            </div>
+          </div>
+          <button class="arrow right-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="recent-recipe-section">
+        <h2 class="section-title">최근 본 레시피</h2>
+      </section>
+    </main>
+  </body>
+</html>

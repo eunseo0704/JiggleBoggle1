@@ -16,7 +16,7 @@
             <h3>💡 핵꿀팁 지금 바로 BEST 요리모음</h3>
 
             <div class="recipe-slider">
-                <button class="slide-btn prev">&#10094;</button>
+                <button type="button" class="slide-btn prev">&#10094;</button>
                 <div class="recipe-list" id="recipeList">
                   <!-- 예시 데이터, Thymeleaf 반복문으로 대체 -->
                     <div class="recipe-card" th:each="recipe : ${recipeList}">
@@ -24,7 +24,7 @@
                         <p th:text="${recipe.title}">레시피 제목</p>
                     </div>
                 </div>
-                <button class="slide-btn next">&#10095;</button>
+                <button type="button" class="slide-btn next">&#10095;</button>
             </div>
         </section>
 

@@ -63,7 +63,7 @@ public class RecipeController {
 
     }
 
-    @PostMapping("saveRecipeData")
+    @PostMapping("/saveRecipeData")
     public String recipeWrite(RecipeVO recipeVo, RedirectAttributes redirectAttributes, HttpServletRequest request) {
 
         int result;
@@ -87,15 +87,10 @@ public class RecipeController {
         }
     }
 
-    @PostMapping("/recipe/detail")
-    public String recipeDetail(@RequestParam("recipeId") String recipeId, Model model) {
-
-//
-//        recipeVo = recipeService.getRecipeDetailData(recipeId);
-//
-//        model.addAttribute("recipeVo", recipeVo);
-
-        return "recipe/RecipeDetailPage"; // 상세 페이지 템플릿 이름
+    @GetMapping("/temp")
+    public String tempPage(Model model, @RequestParam String recipeTitle) {
+        model.addAttribute("recipeTitle", recipeTitle);
+        return "recipe/temp";
     }
 
 }

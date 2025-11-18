@@ -51,6 +51,10 @@ body {
   height: 45px;
   cursor:pointer;
 }
+.main_icon{
+    font-size: 18px;
+}
+
 .logo-container {
   display: flex;
   align-items: center;

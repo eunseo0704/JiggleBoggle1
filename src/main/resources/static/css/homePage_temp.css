@@ -1,0 +1,378 @@
+/* 전체 스타일 리셋 및 기본 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "배달의민족 꾸불림"; /* 이미지와 유사한 폰트 적용 */
+}
+
+body {
+  background-color: #ffffff;
+  padding: 0 40px; /* 좌우 여백 */
+}
+
+body {
+  font-family: "배달의민족 꾸불림";
+  background: #fff;
+  margin: 0;
+  color: #232323;
+}
+.header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #222;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.header-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px 10px 50px;
+  box-sizing: border-box;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+  background: url("https://cdn.discordapp.com/attachments/1144046534868787220/1236294934313209866/image.png")
+    no-repeat center/contain;
+}
+.logo-img {
+  width: 60px;
+  margin-right: 730x;
+}
+.search-box {
+  border: 2px solid #222;
+  border-radius: 16px;
+  padding: 7px 15px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+  background: #fff;
+}
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  flex: 1;
+  font-family: inherit;
+}
+.search-icon {
+  font-size: 1.1rem;
+  margin-left: 5px;
+  color: #222;
+  cursor: pointer;
+  width: 20px;
+}
+.right-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.logout-btn {
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 12px;
+  font-size: 1rem;
+  padding: 10px 24px;
+  font-family: inherit;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.mypage-btn {
+  background: #fff;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.mypage-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffe9e3;
+  border: 2px solid #c24e19;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mypage-text {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  letter-spacing: -1px;
+}
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #222;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  padding: 8px 0;
+  gap: 80px;
+}
+.nav-bar span {
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.nav-bar span:hover {
+  background: #f3f3f3;
+}
+.content {
+  padding: 20px 0;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.arrow {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: #555;
+  font-size: 14px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-arrow {
+  left: -15px;
+}
+
+.right-arrow {
+  right: -15px;
+}
+
+/* ------------------
+    1. 레시피 캐러셀 섹션 (수정된 부분)
+--------------------- */
+.recipe-list {
+  display: flex;
+  gap: 15px;
+  overflow-x: hidden;
+  width: calc(100% - 60px);
+  margin: 0 30px;
+}
+
+.recipe-card {
+  /* 모든 카드의 기본 스타일: 둥근 모서리 흰색 배경 */
+  flex-shrink: 0;
+  width: 150px;
+  text-align: center;
+  background-color: #f7f7f7; /* 배경색 */
+  padding: 10px;
+  border-radius: 15px; /* 더 둥근 모서리 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* 약간의 그림자 추가 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 이미지와 텍스트를 위아래로 분리 */
+  min-height: 250px; /* 카드 최소 높이 설정 (이미지와 텍스트 공간 확보) */
+}
+
+.card-image-placeholder {
+  /* 이미지 영역 */
+  width: 100%;
+  height: 150px; /* 이미지 크기 고정 */
+  border-radius: 10px; /* 이미지 모서리 둥글게 */
+  object-fit: cover;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  /* 텍스트 영역 */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #444;
+  padding: 5px 0;
+  flex-grow: 1; /* 남은 공간을 채우도록 설정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 텍스트 가운데 정렬 */
+  align-items: center;
+}
+
+/* 특별 카드 (나만의 레시피 등록): 화살표 추가 및 굵은 글씨 */
+.special-card .card-text {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.special-card .card-text i {
+  margin-top: 5px;
+  font-size: 20px;
+  color: #000;
+}
+
+/* 마지막 카드 텍스트 스타일 조정 */
+.last-card-text p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.last-card-text .sub-text {
+  font-size: 10px;
+  color: #888;
+  margin-top: 3px;
+  display: block; /* 줄 바꿈 */
+}
+
+/* ------------------
+    2. 웹푸드 소개 섹션
+--------------------- */
+.webfood-intro-section {
+  margin-top: 20px;
+}
+
+.webfood-intro-section .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+
+.more-link {
+  font-size: 12px;
+  color: #888;
+  cursor: pointer;
+}
+
+.food-list {
+  display: flex;
+  gap: 10px;
+  overflow-x: hidden;
+  width: calc(100% - 60px);
+  margin: 0 30px;
+  padding-bottom: 10px; /* 버튼 여백 */
+}
+
+.food-item {
+  flex-shrink: 0;
+  width: 100px; /* 이미지 너비 기준 */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.food-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 2px solid; /* 색상은 개별 클래스에서 정의 */
+}
+
+/* 음식별 테두리 색상 */
+.carrot {
+  border-color: #ff9900;
+} /* 주황 */
+.tomato {
+  border-color: #ff0000;
+} /* 빨강 */
+.cucumber {
+  border-color: #00aa00;
+} /* 초록 */
+.eggplant {
+  border-color: #8a2be2;
+} /* 보라 */
+.cabbage {
+  border-color: #009900;
+} /* 진한 초록 */
+.corn {
+  border-color: #ffcc00;
+} /* 노랑 */
+.sweet-potato {
+  border-color: #b8860b;
+} /* 갈색 */
+.grape {
+  border-color: #6a5acd;
+} /* 포도 */
+
+.food-image {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.food-name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #444;
+}
+
+.sub-text {
+  font-size: 10px;
+  color: #888;
+}
+
+.subscribe-btn {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 3px 10px;
+  font-size: 10px;
+  color: #666;
+  margin-top: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ------------------
+    3. 최근 본 레시피 섹션
+--------------------- */
+.recent-recipe-section {
+  margin-top: 40px;
+  padding-bottom: 50px;
+}

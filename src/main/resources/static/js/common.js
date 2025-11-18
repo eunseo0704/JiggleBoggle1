@@ -43,17 +43,3 @@ window.addEventListener('DOMContentLoaded',function (){
 
 
 });
-
-function goPostPage() {
-    const form = document.createElement("mainFrom");
-    form.method = "POST";
-    form.action = "/targetPage"; // 이동할 페이지 URL
-    input.type = "hidden";
-    input.name = "recipeId";
-    input.value = 123; // 예시 데이터
-    form.appendChild(input);
-
-    document.body.appendChild(form);
-    form.submit(); // ✅ 실제로 페이지가 넘어감
-}
-
