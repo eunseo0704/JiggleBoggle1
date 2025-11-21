@@ -37,6 +37,8 @@ public class SecurityConfig {
                                 .requestMatchers(
                                         "/MainPage",   // ✅ 메인페이지
                                         "/UserMainPage",
+                                        "/aiPage",
+                                        "/api/ai",
                                         "/",           // 루트
                                         "/signup",
                                         "/login",

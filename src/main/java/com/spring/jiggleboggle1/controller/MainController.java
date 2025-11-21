@@ -77,10 +77,11 @@ public class MainController {
 
         return "main/RankPage";
     }
-    @GetMapping("/tempHomePage")
-    public String tempHomePage(Model model) {
 
-        return "homePage_temp";
+    @GetMapping("/aiPage")
+    public String aiPage(Model model) {
+
+        return "recipe/RecipeAiRecommend";
     }
 
 

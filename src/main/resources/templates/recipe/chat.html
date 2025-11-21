@@ -1,0 +1,28 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Recipe AI Chat</title>
+    <link rel="stylesheet" th:href="@{/css/chat.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+        <div th:unless="${isLoggedIn}" th:insert="fragments/header :: site-header"></div>
+        <div th:if="${isLoggedIn}" th:insert="fragments/header :: jb-site-header"></div>
+
+        <div id="chat-container">
+            <div id="left">
+                <div id="chat-box"></div>
+                <div id="input-area">
+                    <textarea id="user-input" rows="2" placeholder="메시지를 입력하세요..."></textarea>
+                    <button id="send-btn">전송</button>
+                </div>
+            </div>
+        </div>
+<script>
+    const userId = /*[[${userId}]]*/ 1;
+</script>
+<script src="/js/chat.js"></script>
+
+</body>
+</html>
