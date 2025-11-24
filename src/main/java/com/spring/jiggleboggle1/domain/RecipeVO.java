@@ -14,15 +14,19 @@ public class RecipeVO {
     private int seq;
     private String userId;
     private String categoryId;
+    private String categoryName;
     private String title;
     private String rcpDisc;
     private String cookTime;
+    private String cookTimeStr;
     private String cookDfct;
+    private String cookDfctStr;
     private String rgtDate;
     private String updDate;
     private String searchName;
     private String tagName;
     private String recipeTips;
+    private int viewCount;
 
     private String ingrId;
     private String[] ingrNames;

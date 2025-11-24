@@ -15,6 +15,7 @@
              ,MAIN.RGT_DATE
              ,MAIN.UPD_DATE
              ,IMG.IMAGE_PATH
+             ,MAIN.VIEW_COUNT
          FROM RECIPE_MASTER MAIN
              ,RECIPE_IMAGE IMG
         WHERE MAIN.RECIPE_ID  = IMG.RECIPE_ID
@@ -40,6 +41,40 @@
         WHERE MAIN.RECIPE_ID  = IMG.RECIPE_ID
           AND IMG.SEQ = 1
           AND MAIN.TITLE LIKE CONCAT('%',#{title},'%')
+        ORDER BY MAIN.RECIPE_ID, IMG.SEQ
+
+    </select>
+
+    <select id="getMyRecipes" parameterType="string" resultType="com.spring.jiggleboggle1.domain.RecipeVO">
+
+        SELECT MAIN.RECIPE_ID
+             ,MAIN.USER_ID
+             ,MAIN.CATEGORY_ID
+             ,CTG.CODE_NAME CATEGORY_NAME
+             ,MAIN.TITLE
+             ,MAIN.RCP_DISC
+             ,MAIN.COOK_TIME
+             ,COT.CODE_NAME COOK_TIME_STR
+             ,MAIN.COOK_DFCT
+             ,DFC.CODE_NAME  COOK_DFCT_STR
+             ,MAIN.RGT_DATE
+             ,MAIN.UPD_DATE
+             ,IMG.IMAGE_PATH
+             ,MAIN.VIEW_COUNT
+        FROM RECIPE_MASTER MAIN
+           ,RECIPE_IMAGE IMG
+           ,CODE_MANAGE CTG
+           ,CODE_MANAGE DFC
+           ,CODE_MANAGE COT
+        WHERE MAIN.RECIPE_ID  = IMG.RECIPE_ID
+          AND IMG.SEQ = 1
+          AND CTG.CODE_HEAD='CTG'
+          AND CTG.CODE = MAIN.CATEGORY_ID
+          AND DFC.CODE_HEAD = 'DFC'
+          AND DFC.CODE = MAIN.COOK_DFCT
+          AND COT.CODE_HEAD= 'COT'
+          AND COT.CODE  = MAIN.COOK_TIME
+          AND MAIN.USER_ID = #{userId}
         ORDER BY MAIN.RECIPE_ID, IMG.SEQ
 
     </select>

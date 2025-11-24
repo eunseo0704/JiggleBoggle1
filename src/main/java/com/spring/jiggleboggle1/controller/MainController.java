@@ -1,5 +1,6 @@
 package com.spring.jiggleboggle1.controller;
 
+import com.spring.jiggleboggle1.security.CookieUtil;
 import com.spring.jiggleboggle1.security.JwtUtil;
 import com.spring.jiggleboggle1.domain.RecipeVO;
 import com.spring.jiggleboggle1.service.RecipeService;
@@ -23,6 +24,7 @@ public class MainController {
 
     private final JwtUtil jwtUtil;
     private final RecipeService recipeService;
+    private final CookieUtil cookieUtil;
 
 
 
@@ -64,7 +66,19 @@ public class MainController {
     }
 
     @GetMapping("/myPage")
-    public String myPage(Model model) {
+    public String myPage(Model model, HttpServletRequest request) {
+
+        String userId="";
+        String token = cookieUtil.getTokenFromCookies(request, "JWT_TOKEN");
+        if(token != null) {
+            userId = jwtUtil.getUserIdFromToken(token);
+        }
+
+        List<RecipeVO> recipeList = recipeService.getMyRecipes(userId);
+
+        model.addAttribute("recipeList", recipeList);
+        model.addAttribute("userId", userId);
+
         // 뷰 반환
         return "user/myPage";
     }

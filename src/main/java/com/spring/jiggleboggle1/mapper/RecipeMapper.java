@@ -12,6 +12,8 @@ public interface RecipeMapper {
 
     public List<RecipeVO> getSearchList(String searchName);
 
+    public List<RecipeVO> getMyRecipes(String userId);
+
     public int saveRecipeFormData(RecipeVO recipeVo);
 
     public int insertRecipeImages(List<RecipeVO> imgList);

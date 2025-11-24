@@ -23,13 +23,16 @@ public class RecipeService {
 
     private final RecipeMapper recipeMapper;
 
-
     public List<RecipeVO> getRecipeList() {
         return recipeMapper.getRecipeList();
     }
 
     public List<RecipeVO> getSearchList(String searchName)  {
         return recipeMapper.getSearchList(searchName);
+    }
+
+    public List<RecipeVO> getMyRecipes(String userId)  {
+        return recipeMapper.getMyRecipes(userId);
     }
 
     @Transactional
@@ -128,10 +131,7 @@ public class RecipeService {
             }else{
                 // 실제 조회수 추가
                 result = recipeMapper.insetUserView(recipeId, userId);
-
                 result = recipeMapper.updateUserView(recipeId);
-
-
 
             }
 

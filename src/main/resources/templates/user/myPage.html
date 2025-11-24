@@ -5,101 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- 프로젝트 공용 CSS -->
   <link rel="stylesheet" th:href="@{/css/style.css}" />
-  <!-- 마이페이지 전용 CSS (BM kkubulim 포함) -->
   <link rel="stylesheet" th:href="@{/css/myPage.css}" />
   <title>JiggleBoggle</title>
 </head>
 <body class="mypage">
+    <form id="mainForm" name="mainForm">
+      <input type="hidden" id="userId" name="userId" th:value="${userId}">
+      <!-- 로그인 상태별 헤더 주입 -->
+      <div th:unless="${isLoggedIn}" th:insert="fragments/header :: site-header"></div>
+      <div th:if="${isLoggedIn}" th:insert="fragments/header :: jb-site-header"></div>
 
-<form>
-  <!-- 로그인 상태별 헤더 주입 -->
-  <div th:unless="${isLoggedIn}" th:insert="fragments/header :: site-header"></div>
-  <div th:if="${isLoggedIn}" th:insert="fragments/header :: jb-site-header"></div>
-
-  <main class="container">
-    <!-- 왼쪽 피드 -->
-    <section class="sketchy left-pane">
-      <div class="filter-bar">
-        <div class="seg" role="tablist" aria-label="공개 상태">
-          <button class="active" role="tab" aria-selected="true">공개중</button>
-          <button role="tab" aria-selected="false">작성중</button>
-        </div>
-
-        <div class="chips" aria-label="정렬">
-          <div class="chip active">최신순</div>
-          <div class="chip">조회순</div>
-          <div class="chip">댓글순</div>
-        </div>
-      </div>
-
-      <!-- 카드 1 (Unsplash 링크 이미지) -->
-      <article class="card" aria-label="레시피 카드">
-        <div class="thumb"
-             aria-hidden="true"
-             style="background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTEhIVFRUWFhcVFRUXFRcVFRgVFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGi0lICUtLS01LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAPsAyQMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQECAwYAB//EADsQAAEDAQYDBgQEBQQDAAAAAAEAAhEDBBIhMUFRBWFxEyKBkcHRMqGx8AZCUuEUI2Jy8RUzktKCorL/xAAaAQADAQEBAQAAAAAAAAAAAAACAwQBAAUG/8QAKREAAgIBBAEDBQADAQAAAAAAAAECEQMEEiExQRNRYRQiMnGBUpHwBf/aAAwDAQACEQMRAD8AMkuE4Aa++5VmGcGjHQn7wWDDBxxP18Vs5vg06e4zPivAb8nrlQADLu9uP3RNEkCXfAchr4bdVQY/CMRqdfZeNQDCL306jdDZprarOKrcQAPbUblc9VpupOwy0OUjbkU8p1buLjM5D15K9rsoe03ou7eoG61SZlAdhtsiGmTqjgwH4c/p0XPljqb8Bgf/AGHX9X1Taz1rzZYe6c3HDz2W1/o4u4DKL3PbpuharCw4GemXnuinVZMDDScp9kit/FTJZRAccnO/KOQ3P3imY3K+AJpeTobHbt03oWmVxXBLM8A3nFznGSSunsVndqvUg3XJDNJPgcNfKusqYWiahJ5eXl5aceVSrqpXHAnEnxSedh6hKbSztaYjMOa7qWnL6plxn/Yqf2u+QJSbhNa9TCVN80EhrSN4T8tuS0DSs6QRDQVqRzZi8eHTD5Yj5LJ17cHqPUFa1nhCuqjMlZJpGo0BfoG+ZHoVftKmzP8Ak7/qlNq4rd+ASefogP8AWavLyCV60TdrGDWkjRu2/TdepGMhO85eSu8DTH72XqmI7xx2H3AXk8nqFXZ4mdo05KapkYw3kMyOiox5yAgHP3lUwaf1bHRZ8mmjXaAeJ05jZVZXuHvG9y081Wu4kTkNsh1AQrHAmPIn6QiSMGdqsoqCT8ByjfkktRzqRjNufJ3Pk4JzZKpmHYNPn4Ba22xBzYiGb8+v6lq7MZy9oqPrd1stp7ZOPU6DkmnDODDDCByWNJt1xGgyO46aJ5Ya69LDGNWiPLKV0HWSwNaMAj2U1lRfKKaFUiVlYUwvVHQJWdKte05YYiduqW88FLbfIWyVXRdeXnfsqkptglyqlV7QKL644G4kJY4btdh4Li+B1K5ZNNoc0EjMAyIOMkYRI8fFdraHd4dPVcTZWtY5xDQe87k4AEjuuGLcpw3SckqKdPp5Zm1HwOv9Ucw9+k5rRevOguECIII0xxw6SmlLiDCSy8LwAJbqA6YkeB+ykNq4mwBrXC/JDm43ZumRfjJwImMjE9AKvF6dSSWVWEgDtWO0aXERJBjvHIYyMwsWSgvpMrV7f+/XZ09ttTWgk48syeiUWm0B2Q90gfbqlWr3DOl0mLo3cDGOXtinXDqjXNwmdQ4XXCRq04hS5XKf6FqNHmWZxzw8lp/Bf1HyHsiJXpQKKRpoHmNmnP8AzqsHNAMZ7HTyW9cak9QM/wBlgKhIIA8s/NSV4L/kiu6e8TBGnqAsmVREAZ5E4kFVLLpxOOw914OJ+AYfeZRV58nWTcIPeOPmV5zIi4PUj2UtDTg4y4ZAa8iVWpbAGkO7o239yiqjAkNF2SZdsNep3UV+KgU4f0a31680sZXe7u0gf7ox8AmVg/Dzib1Q4/NPhp5S5fAqeWMRfZr1QzHuntisDtcE2snDmsGARraYCvhjUVRFPI5OzCz0YCKaxWY1FUmIm6A7FVu/3bhBAAz0QlAhodTpuguxJzMCZA2RHHnEVD0SkO138189ue5v5Z6ajcUEWeq8A3nYzhjIj0UOtW6HCCvOkznK9DR5Ju03wT54JcjdtdbMqpbRpuOiOo0d16CJWVrVO8fD6LlLUy697f6iR0diD9V01qbDj4fQJHxqlEVBlEP6aO8EvKrRf/52VQy0/ImtQBF0gkOwPLAmTtlE8wh6lQEkTiIkbTiFe1WgiRd8TMEcsMTyGxxwQlGsIDTfw1LSNThEkjbw5hJp0e08kd1BdhcQ+W/FBjnALrp5GCOUg6Lo7LQpiXMbF/vE6m8bxzyzySCwWdzsW4Ey1hjUiHOjZrSSeZaMyF0tOzuEAQAMB0GS1QbR5GvnH1OPYmFK0p2bcyt+wbsiWFkDmAAAHc7DLxKmoDGGDfIdOas+s0YtEkDGcuoCVWu3tk3nTOgx6LzlHwj0L8mznt/uI8B7rGpa4zIAOYHoEE19R57ou/VNeHcALjed881TDBJ98CpZYoBZWe4/y2/+R9k2sH4ec83qhJK6Cw8MYwYBMWshWY9PGJLPO5Adk4cxgwARjWKylUVQmyIXlKhYzi7St2VYQsqQULVnFOJ2YVHTMIH/AEsbk+PsmLiqFTrT407od6sqqwIWBo0+ZKs2zNGQA8EWvQmwgo9ICUm+wYUVIprYheTKAAeIUJF4aYHpv97pTUAyK6UFJ+IcMM3qeI1bqP7dxyWNGpnJW7hhbNxt9n6fzN/t3H0Qlk4ReP8Atu/8g5o83jLMYAnHKDK6drCtGsS/TRb9dk21x+/IPYrIKYgRMRIECB+Vo0by8SScUY0KzKa2bSRpEbd8so0LS6rEBuay/ihzWmHGmpVqH9I2HumPD+Bk5hP6PDWsusgXnGSdmtxIG2g8UfUcGOa3IQ4u6CI+ZHzSoYoxHSytgth4U1uia06QCHdaYMZYA+f+FZloCcqQl2wxqssGVVqCitGEryxtNqZTHedGw1PQJNa+OnJgDRucT7D5pOXUwx9sdjwTn0h65wAkmBucB5oOtxWi380/2gn55fNcraLYXGXOJPMyh3WhRT10n+KKo6OK/JnTVOPt/Kxx6kN+krE8ffoxo6kn2XPdsrNrJD1WX3HLTYl4Hh47V/Szyd/2UjjtTVjPmPVJ2vWjUH1OT3C+nx+w4Zx7el5On5ELdnG6ZzlvUeolJAxSaaOOtyLsGWkxs6Nlra7FpB6GVbtlyxp6jA7jBa07bUbreGxz8/eVTDWp/kTz0bX4s6TtVIqJLR4k12GR2PodUW2uq45FJWiWWNx4YbVpNf8AEMd8j5od3Dxo7zXm1lq2sisCgf8AhXDZe7F+4HQI0VFaVpwtNj3JK9/CDb5pkQouraOsEaHdoXGIgNB5Zuw3J+iCtDy+0XYMACT/AE/ETPyRvaKle1BjS45D5nQIGahZxO1fznY5QPlPqVNmrOKW2dpe4uObjK6OxWYMbedhCG+LGV4C7K2BJQVv4zGFP/l7D1QPE+J3sBg369UhtNqUOXUyl9sOvcrxaZR5n2F2i2SSSZOpKBqWlB1K6rZhfdByxJ8PsKfb5Ku+EECqTkvNdjBVzgIAEaIW7JlYmg9g4ZZGxr4n2QJLu0c0AYEQMQSIM96CM4+eGRTJjnOYLsTzy+SGr0IwDAbx/UczrGczlHyRRafYiSlfBo1kb+f7L1CtuWjo4OHngi6vBnFuL8dswJ0mUttPBX6OB8wh+xjFddhT7WB+YDqQrNtS52tZXtwLYVKVZzMj1ESEbxRkuDFJrs6kVwV4vCSUbe08j8vNEi0QkvG12GpJh1SCppWlzP6h8x0OqDFeclYVUcJSg7QMlGSpjmjawcQUVTrrnL5Bkf5RtC0yvRxZlPjyQZcO3nwPWVVuyqlFKuiadVPsnaGgepvIJlVadqisGhZabc2n8Rk7D1OiV1bS6sZODRkNFSrZxO/X6o6x0JKW7fY5JIM4XZtSsuLW+cB8I+fNEW6rcZdGZzXM220KHUZdz2LorwY6W9mdqtKAfUlRUeswJS4xod2WAJwTCyULvUr1js8It7foBzxJSsk74Q/FHmwW0M+uWwQ4eQPrzxnLxR1WlBLCCHaTqgqwaGyMSSZGx2+91iTGuhvYKzRTBOmEb/ujuD0C55qO0wG08unql3B+HvfgcAMXHadBzwXR3AwBrRAGSCT8CpJIvWIQFWMT5n3VbZSa/wCIkiCLs4GS0g3ThILRB0xSHiFqqURdvdo4AEy4N7pIkOwjInGNkcIbumTznt7G72NcNCCPAgoO18LpvGLcdCMMUu4Xee69JbdMReJEbDIbaRgnjzgiktjqzoS3qzlbbYCw4GR81LK0CCm9qaHZpTUDQI1TFJtUw0l2a1QWwQZH7StaNovdVSwjQg/ZCEtDCx588Nij2cWLcuRo16sHwZCDo1Q4c1sx6XTi+DbtUxpRqziEXTqpNQqweR+5TBjl6GKe9fJFkhtYzp1Vr2iXsete0TRNAVMSm1gbAnxSyg1NKpu0+uHqfRJzZNkGx2OG6SQq4naZJK5+01JKPt9RKKhXnY4l8nzRVxRVkpIWkJKbWRmEo5ukdFWwyixRWIB5kiDziI5IWq4mcSPE5eCANlLjIhJUb7Y/dtGtttDX0gSDepm6XAjI4tkZ+KD4cQ9znYmPqZx64fNLKjKtMkjEEXS04iP29F134RsjXdlhmQ939xOu+X0TZrizozR0vDeHdnSAIxOJ6nT08FlaGJ3aniI+SV1QpskNvQqE3Llii0UJ6pRbqD4Nyk17jgbxgCAbro/MOUhdPWowEDWYshkcXybKCkhI6w3Q65DXHrdB3uzh4LO0UqpIPaBoGTQ2ZGocScfCPVN3tQdciExZGD6aFtprXQSkZdekrfitQkwhGEwqMceLMYfZK5bicRlnt9hY1HXiScyq03dwdY8NV4FNfsKfZWlUulHFyAqBa0KkiNkLVoxMODkwstSR0wShj0bYnw6N1uGW2RmRbojRjlpfQ7SryryQYWGhK04yYAbsJ8z/AITGx0ICV8f+M9B9AodY/tivko0vMmzlra7FLqhR1sOKAelQKPJtZgmrQcI2JS+yDJOOxJbAEnWPp9+qXPljIccg5aHQ1oMyZ8IP0lbU6RAi7EZTBnngrUa1OkA7vOLziWtJiBgIGTcIneJ0Vq1sEXvymIOsnS6Qsp+xkpp+TCpSWrbSaQF04jvYad4xO+BB8VlVtLBm4Drhy9QsrY0ui7hAA5ZRjyXNcUzYSV8Dah+IKznNvAPwEnLLnz6JrT40xxx7p5+64ejVc0EweZGI5c/vVam13tvvdDODGx2s+iGu1zZlLq7sVz7be6m3OZxjSPRaU+LNMSISJKQWxDN+RSy16wijWbHdd4TI8tPBJOKWzAjU4IsfLBlEV1BedJ1OewlZXCDAx5bqSZCkQI3x8oV+OkhEzOtaYhsRGPiY+/FWY8FCGk4ucS3CcNScBj008FNEx94pjViE7C3LKk6CtZQ+qFGhtNyKovggoGii6aWzUOgVMrOmcB0V16MXasjfB29FiQfiFv8AMPQf/IXTNakX4lp94Hdv0JH0hRa9cRfyP0T5ZxFsCAemtuYljmEmBmcB1KRB8FTXIy4PSlwOgz9B1XUWSyNaXTBIAMg4DPy3Q/BeBFzWy6GzdgZk6z4Y5ao232Bt002lzGziWmCYIkE5wY8sEE3St+Q+FwuxTXpUngPbTvFp7sANInAxJGEafKUmtzu6+e89sgAYCcxAORAdnyK6Z8ARsISy0WUEz1J6mMfr5oMeVJgTxNo5uz2E1WgzdMzI0GoHz800FO6Ik4byeeZzR7KIGQ9FlaG4I5ZdwOPEoCmqUDWqxjHlgmFYJba24FNxGzNLNxltR3Zw4EDUYeBCaMcEp4Fw66C8/Ee8eWw8F03C7CakzJAHhKHOoRf2jsMpNXIX1ah0nBA1heMuxlP7VwtzcoI+aXVLOdRBSYTQ58oXjp99FDWSVNYxrEnP76LegzRUdIkm+aNKVNeqWQO5HQoljFuxq6MuRbQkr0SwwR12QuqY8Yq/zI0HoP3KW08SnsALohF0wh6LUXSbikSDQypZDotFmxaL0Y9Iil2fQgEs4/RmmDsfkf8AA801CpXphzS06iP3+hSdXj34mv6dpp7Zo+cW2mllKn/MbGjgfIz6Lo+IWcgkEZFB8PDGOLnfECC0ESDBBjaPZeVjnweu48jqwcabZ57TGIc0AfqaPPNav4oyti0jmMj4hcta67nkk4mc+qWOaQbzSTGOZBgbQm/mtrZ04U9x1zysnuAInDmcBy9kmsnGHHGLwmDo7wOqf0nMe3Qg4EET1BCmlBwf3Gp7ugdwQlpKOrNaBDRA2GCWViihyYwC1QAScIXP1LZ2j2tb8M47kA4dAjuMV74I0ieu0pZ+H6je0IcMDhlJ+816OKFQcieXMkjtrDQa661pjDExM4cl0tisvZMDSMcz4qPwzw0NuumQe80xBiNdkdbTiVJnjUU2OU1e1C+0NS+vRBTKoJQlVqliMOb4jQhzS4C7JnkIwcTpkJ0x8VZtlaHXgBkB5R7JnWQrlT6jqhHpq7KQvOdAJUlL+J17rYnmfQI8fLMl0KbZVk/e6mztQrXFzpTGzMVUuEJCaTUZZm4zssqTEVTEDqlRW6SRsnSs3prVZsC0hekRH0VSV4KUUkJixB+ILF+cdHddCuVtNJfR6jAQQRIOBXIcX4cWOjTQ7heHqcPpT46Z7Onzb40+zjbTeBw9fRYWO13DB13xGPPRObXZkotNlRY5pqmMladhvC7UGPkNDhBwOQJ16heFpIeSyRewLdDzI9UoohzCccOWB8UfZ3zz54SFs4/1Gwkh5YrR2hLTg4eR5hCcYcGi7qc+mqyNpAbAaQ4me01AA+EAZYyZS60Nc4kklx3mUEIKzZsU2x16QPH2Q1KhdcDjgmzbCr/wauWRJUSNNuzo+DcYcA3vktux01GG3ujaP4hxh4BnUZx01XK2ZjmZZHMIhr4xxnyUko+PBSmnz5Otp8SpE4Og85Cm0uXIufKKoW9zRGY2PoUl4w/0MqqGKx/1IHNpC0bUa8YHwRKAEiHLluK1i+oQMhH0C6a2GGu6fsuZZSlxPP8AZVYUlyIm7L2SimlCms7PQTCnShDOdmRRNNq0YJVTsPFbU2qnT46+5k+afhGjAtLqhjVrdVQg+gqV6FKc0ToghD2uzCo0td4HUFEqpU+TGpqmPx5HF2ji+IWAsMEdDoUor2ZfQrXZg8QR9+i5u28OLSfvzXi5cUsL569z1sWVZF8nIV7Ig30CMl09WghKllWRyNBuInpVyMwiqTmnKFpUsSHdZCjuLBdoJFMKeyCFax41K1bUfyXV8mGvYqOxUCo7YKwLjos5NKmiFQ0BuUU2i4rdllWbqN5FTrNjgqPoObiAeo/ZPmWcLQ0wt9VnVwcw99WoLt0xucD5LezcOjNPDTCycj9VvhC3BAzKQCh7owGas9+3n7KKbFThwt8yJ8mXwj1NiIY1eYxE0qJVyVEjZ6mxbdkiKNnRHYIqAcjrIUQrBTCcJKLykhQhaNTIIWVSiHZj3W68lSgmqaGxm0IbbwnUY9PZJa1kIXbOah69la7MY75Fedl0HmD/AIXY9X/kcQ6isjRXU2jhH6SPHA+YS6tw5w/KfDH6KSWHJDtFUcsJdMSmgo7AJg6iqGmgs0EFEK4phb9mourjrKBqlSYXoOxWqLfSOckuyJVXPVjSd0Ufw6ohpZy74EyzxQO+osXAnpsjxZlqyzcldj00Yks8zYtZQRNOylHsordlFUKNE7mCUrMEZTorZlJbMYioW2UZTWlxatYr3EVA2O4XlK8jBIhQQpXlxpWFCuoIWUbZChTChY4mplSxZvpLaF5DtDUgGrS3EoSpY2fpb5BNy1ZOpoHBPtBLIJnWJv6QsnWNv6R5SnDqSzNJZ6cfYL1X7io2eMhCzNBNTTVCxEog7xWbOo/h0z7Ne7JFtBcxcKCuKKO7JSKS7aC5WCNpLRtNEimrBiKgbMG01q1i1axXFNbRxkGq0La6puLqMGEL0KV5aYVXlK8uOIhQpXiuNIXl5eXHEEKCFK8uOsrCqQrlVK44o5qoWLUry6jrBzTVDTRKghdR1gppqvZoohRC44GDFfs1qQpAXHWZXFIYtFK44oArAKVZccUhTCsvLjD/2Q==');"></div>
-        <div>
-          <h3>유행막차탑승 치즈불닭쌈 레시피</h3>
-          <p>꾸덕쫀득 맥주안주로 딱! 야식으로도 딱인 치즈 불닭쌈 레시피! 세상에서 가장 맛있는 불닭쌈 레시피 공유합니다~ ...</p>
-          <div class="meta">
-      <span class="i" title="인분">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21c0-4-4-7-8-7s-8 3-8 7"/><circle cx="12" cy="7" r="4"/></svg>
-        1인분
-      </span>
-            <span class="i" title="소요시간">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-        10분 이내
-      </span>
-            <span class="i" title="즐겨찾기">
-        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5"><path d="M12 17.3l-5.4 3.3 1.5-6.1L3 9.8l6.2-.5L12 3l2.8 6.3 6.2.5-5.1 4.7 1.5 6.1z"/></svg>
-        아무나
-      </span>
+      <main class="container">
+        <!-- 왼쪽 피드 -->
+        <section class="sketchy left-pane">
+          <div class="filter-bar">
+            <div class="chips" aria-label="정렬">
+              <div class="chip active">최신순</div>
+              <div class="chip">조회순</div>
+              <div class="chip">댓글순</div>
+            </div>
           </div>
-        </div>
-      </article>
 
-      <!-- 카드 2 (base64 이미지) -->
-      <article class="card" aria-label="레시피 카드">
-        <div class="thumb"
-             aria-hidden="true"
-             style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_UJGkSoz3SvlKOpTt6KfPgkl4--eBWKgRRrehUggXMX_7Jj6L6O8JHGUf8afvTslD6nU&usqp=CAU');"></div>
-        <div>
-          <h3>집에서도 충분히 만들 수 있는 귀여운 왕- 루피마카롱</h3>
-          <p>집에서 간단하게 만들수 있는 왕하고 벌리고 있는 왕-루피꼬끄! 집에서 가볍게 만들 수 있는 방법! ...</p>
-          <div class="meta">
-      <span class="i">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21c0-4-4-7-8-7s-8 3-8 7"/><circle cx="12" cy="7" r="4"/></svg>
-        1인분
-      </span>
-            <span class="i">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-        2시간 이내
-      </span>
-            <span class="i">
-        <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5"><path d="M12 17.3l-5.4 3.3 1.5-6.1L3 9.8l6.2-.5L12 3l2.8 6.3 6.2.5-5.1 4.7 1.5 6.1z"/></svg>
-        아무나
-      </span>
+          <!-- 카드 1 (Unsplash 링크 이미지) -->
+          <article class="card" aria-label="레시피 카드" th:each="recipe : ${recipeList}">
+              <div class="thumb" aria-hidden="true">
+                  <img th:src="${recipe.imagePath}" alt="레시피 이미지" class="thumbImg">
+              </div>
+              <div>
+              <h3 th:text="${recipe.title}"></h3>
+              <p th:text="${recipe.rcpDisc}"></p>
+              <div class="meta">
+                <span class="i" title="분류">
+                    <img th:src="@{/imgs/icon/cooker.svg}">
+                    [[${recipe.categoryName}]]
+                </span>
+                <span class="i" title="난이도">
+                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5"><path d="M12 17.3l-5.4 3.3 1.5-6.1L3 9.8l6.2-.5L12 3l2.8 6.3 6.2.5-5.1 4.7 1.5 6.1z"/></svg>
+                    [[${recipe.cookDfctStr}]]
+                </span>
+                <span class="i" title="소요시간">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                    [[${recipe.cookTimeStr}]]
+                </span>
+                <span class="i" title="조회수">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21c0-4-4-7-8-7s-8 3-8 7"/><circle cx="12" cy="7" r="4"/></svg>
+                    [[${recipe.viewCount}]]
+                </span>
+
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- 오른쪽 상단: 프로필 -->
+        <aside class="sketchy right-pane">
+          <div class="profile">
+            <div class="big-avatar"></div>
+            <div class="nickname">불빨간 토마토</div>
+            <div class="sub">자기소개를 등록할 수 있습니다</div>
+            <div class="upload" title="레시피 업로드">＋</div>
+            <div class="hint">총올림0 · 팔로워0 · 팔로잉0</div>
           </div>
-        </div>
-      </article>
-    </section>
+        </aside>
 
-    <!-- 오른쪽 상단: 프로필 -->
-    <aside class="sketchy right-pane">
-      <div class="profile">
-        <div class="big-avatar"></div>
-        <div class="nickname">불빨간 토마토</div>
-        <div class="sub">자기소개를 등록할 수 있습니다</div>
-        <div class="upload" title="레시피 업로드">＋</div>
-        <div class="hint">총올림0 · 팔로워0 · 팔로잉0</div>
-      </div>
-    </aside>
-
-    <!-- 오른쪽 하단: 요리 후기 -->
-    <section class="sketchy reviews-pane" aria-label="요리 후기">
-      <h3 class="section-title">요리 후기</h3>
-      <div class="empty">아직 후기가 없어요</div>
-    </section>
-  </main>
-</form>
+<!--        &lt;!&ndash; 오른쪽 하단: 요리 후기 &ndash;&gt;-->
+<!--        <section class="sketchy reviews-pane" aria-label="요리 후기">-->
+<!--          <h3 class="section-title">요리 후기</h3>-->
+<!--          <div class="empty">아직 후기가 없어요</div>-->
+<!--        </section>-->
+<!--          -->
+     </main>
+    </form>
 </body>
 </html>

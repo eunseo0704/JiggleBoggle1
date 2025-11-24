@@ -27,6 +27,21 @@
                 <button type="button" class="slide-btn next">&#10095;</button>
             </div>
         </section>
+        <section class="best-recipes">
+            <h3>💡 오늘의 랜덤 추천레시피 </h3>
+
+            <div class="recipe-slider">
+                <button type="button" class="slide-btn prev">&#10094;</button>
+                <div class="recipe-list" id="recipeListSnd">
+                  <!-- 예시 데이터, Thymeleaf 반복문으로 대체 -->
+                    <div class="recipe-card" th:each="recipe : ${recipeList}">
+                        <img th:src="@{${recipe.imagePath}}" alt="레시피 이미지">
+                        <p th:text="${recipe.title}">레시피 제목</p>
+                    </div>
+                </div>
+                <button type="button" class="slide-btn next">&#10095;</button>
+            </div>
+        </section>
 
   </form>
 
